@@ -6,8 +6,10 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface DCTWebViewController : NSObject
+@interface DCTWebViewController : UIViewController
+
+
 
 @end

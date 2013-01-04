@@ -8,6 +8,13 @@
 
 #import "DCTWebViewController.h"
 
-@implementation DCTWebViewController
+@interface DCTWebViewController ()
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@end
 
+@implementation DCTWebViewController
+- (void)viewDidUnload {
+	[self setWebView:nil];
+	[super viewDidUnload];
+}
 @end

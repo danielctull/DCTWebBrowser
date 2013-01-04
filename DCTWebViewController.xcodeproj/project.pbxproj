@@ -28,9 +28,9 @@
 /* Begin PBXFileReference section */
 		24008B13169775EA00C8AB03 /* libDCTWebViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDCTWebViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		24008B16169775EA00C8AB03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		24008B1A169775EA00C8AB03 /* DCTWebViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DCTWebViewController-Prefix.pch"; sourceTree = "<group>"; };
 		24008B1B169775EA00C8AB03 /* DCTWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCTWebViewController.h; sourceTree = "<group>"; };
 		24008B1D169775EA00C8AB03 /* DCTWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTWebViewController.m; sourceTree = "<group>"; };
+		24008B241697760900C8AB03 /* DCTWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCTWebViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,17 +75,9 @@
 			children = (
 				24008B1B169775EA00C8AB03 /* DCTWebViewController.h */,
 				24008B1D169775EA00C8AB03 /* DCTWebViewController.m */,
-				24008B19169775EA00C8AB03 /* Supporting Files */,
+				24008B241697760900C8AB03 /* DCTWebViewController.xib */,
 			);
 			path = DCTWebViewController;
-			sourceTree = "<group>";
-		};
-		24008B19169775EA00C8AB03 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				24008B1A169775EA00C8AB03 /* DCTWebViewController-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +190,6 @@
 			buildSettings = {
 				DSTROOT = /tmp/DCTWebViewController.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DCTWebViewController/DCTWebViewController-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -210,7 +201,6 @@
 			buildSettings = {
 				DSTROOT = /tmp/DCTWebViewController.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DCTWebViewController/DCTWebViewController-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
