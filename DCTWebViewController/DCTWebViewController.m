@@ -16,12 +16,29 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextButton;
 @end
 
-@implementation DCTWebViewController
+@implementation DCTWebViewController {
+	NSURLRequest *_request;
+}
+
+- (id)initWithRequest:(NSURLRequest *)URLRequest {
+	NSBundle *bundle = [[self class] bundle];
+	self = [self initWithNibName:@"DCTWebViewController" bundle:bundle];
+	if (!self) return nil;
+	_request = URLRequest;
+	return self;
+}
+
+- (UIView *)rotatingHeaderView {
+	return self.navigationBar;
+}
+
+- (UIView *)rotatingFooterView {
+	return self.toolbar;
+}
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	self.rotatingHeaderView = self.navigationBar;
-	self.rotatingFooterView = self.toolbar;
+	[self.webView loadRequest:_request];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -44,6 +61,22 @@
 }
 
 - (IBAction)done:(id)sender {
+}
+
++ (NSBundle *)bundle {
+	static NSBundle *bundle = nil;
+	static dispatch_once_t bundleToken;
+	dispatch_once(&bundleToken, ^{
+		NSDirectoryEnumerator *enumerator = [[NSFileManager new] enumeratorAtURL:[[NSBundle mainBundle] bundleURL]
+													  includingPropertiesForKeys:nil
+																		 options:NSDirectoryEnumerationSkipsHiddenFiles
+																	errorHandler:NULL];
+
+		for (NSURL *URL in enumerator)
+			if ([[URL lastPathComponent] isEqualToString:@"DCTWebViewController.bundle"])
+				bundle = [NSBundle bundleWithURL:URL];
+	});
+	return bundle;
 }
 
 @end

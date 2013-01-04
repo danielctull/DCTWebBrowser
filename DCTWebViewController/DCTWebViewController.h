@@ -10,6 +10,7 @@
 
 @interface DCTWebViewController : UIViewController
 
+- (id)initWithRequest:(NSURLRequest *)URLRequest;
 
 
 @end

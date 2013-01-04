@@ -60,7 +60,7 @@
 								<reference key="IBUIToolbar" ref="555777832"/>
 								<int key="IBUISystemItemIdentifier">13</int>
 							</object>
-							<object class="IBUIBarButtonItem" id="684007178">
+							<object class="IBUIBarButtonItem" id="729774854">
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<reference key="IBUIToolbar" ref="555777832"/>
 								<int key="IBUISystemItemIdentifier">5</int>
@@ -83,7 +83,7 @@
 								<reference key="IBUIToolbar" ref="555777832"/>
 								<int key="IBUISystemItemIdentifier">5</int>
 							</object>
-							<object class="IBUIBarButtonItem" id="236186958">
+							<object class="IBUIBarButtonItem" id="364895399">
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<reference key="IBUIToolbar" ref="555777832"/>
 								<int key="IBUISystemItemIdentifier">5</int>
@@ -96,7 +96,7 @@
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<reference key="IBUIToolbar" ref="555777832"/>
 							</object>
-							<object class="IBUIBarButtonItem" id="778526639">
+							<object class="IBUIBarButtonItem" id="327995899">
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<reference key="IBUIToolbar" ref="555777832"/>
 								<int key="IBUISystemItemIdentifier">5</int>
@@ -154,6 +154,7 @@
 							<bytes key="NSRGB">MSAxIDEAA</bytes>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<bool key="IBUIScalesPageToFit">YES</bool>
 						<int key="IBUIDataDetectorTypes">1</int>
 						<bool key="IBUIDetectsPhoneNumbers">YES</bool>
 					</object>
@@ -305,9 +306,9 @@
 							<reference ref="427569038"/>
 							<reference ref="887189354"/>
 							<reference ref="881479836"/>
-							<reference ref="236186958"/>
-							<reference ref="778526639"/>
-							<reference ref="684007178"/>
+							<reference ref="364895399"/>
+							<reference ref="327995899"/>
+							<reference ref="729774854"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -374,17 +375,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">39</int>
-						<reference key="object" ref="778526639"/>
+						<reference key="object" ref="327995899"/>
 						<reference key="parent" ref="555777832"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">40</int>
-						<reference key="object" ref="684007178"/>
+						<reference key="object" ref="729774854"/>
 						<reference key="parent" ref="555777832"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">38</int>
-						<reference key="object" ref="236186958"/>
+						<reference key="object" ref="364895399"/>
 						<reference key="parent" ref="555777832"/>
 					</object>
 					<object class="IBObjectRecord">
