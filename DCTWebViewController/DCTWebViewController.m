@@ -39,6 +39,7 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	[self.webView loadRequest:_request];
+	[self _updateButtons];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -61,6 +62,24 @@
 }
 
 - (IBAction)done:(id)sender {
+}
+
+- (void)_updateButtons {
+	self.nextButton.enabled = [self.webView canGoForward];
+	self.previousButton.enabled = [self.webView canGoBack];
+}
+
++ (UIImage *)imageNamed:(NSString *)name {
+	NSInteger scale = (NSInteger)[[UIScreen mainScreen] scale];
+	NSBundle *bundle = [self bundle];
+	while (scale > 0) {
+		NSString *resourceName = (scale == 1) ? name : [NSString stringWithFormat:@"%@@%ix", name, scale];
+		NSString *path = [bundle pathForResource:resourceName ofType:@"png"];
+		UIImage *image = [UIImage imageWithContentsOfFile:path];
+		if (image) return image;
+		scale--;
+	}
+	return nil;
 }
 
 + (NSBundle *)bundle {
