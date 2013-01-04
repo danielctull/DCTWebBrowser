@@ -9,12 +9,41 @@
 #import "DCTWebViewController.h"
 
 @interface DCTWebViewController ()
+@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *previousButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextButton;
 @end
 
 @implementation DCTWebViewController
-- (void)viewDidUnload {
-	[self setWebView:nil];
-	[super viewDidUnload];
+
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	self.rotatingHeaderView = self.navigationBar;
+	self.rotatingFooterView = self.toolbar;
 }
+
+- (void)viewDidLayoutSubviews {
+	[super viewDidLayoutSubviews];
+	
+}
+
+- (IBAction)refresh:(id)sender {
+}
+
+- (IBAction)action:(id)sender {
+}
+
+- (IBAction)goBack:(id)sender {
+	[self.webView goBack];
+}
+
+- (IBAction)goForward:(id)sender {
+	[self.webView goForward];
+}
+
+- (IBAction)done:(id)sender {
+}
+
 @end

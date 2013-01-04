@@ -10,7 +10,27 @@
 		24008B17169775EA00C8AB03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24008B16169775EA00C8AB03 /* Foundation.framework */; };
 		24008B1C169775EA00C8AB03 /* DCTWebViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24008B1B169775EA00C8AB03 /* DCTWebViewController.h */; };
 		24008B1E169775EA00C8AB03 /* DCTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24008B1D169775EA00C8AB03 /* DCTWebViewController.m */; };
+		24008B3A169778E600C8AB03 /* DCTWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24008B39169778E600C8AB03 /* DCTWebViewController.xib */; };
+		24008B3C1697791200C8AB03 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24008B3B1697791200C8AB03 /* UIKit.framework */; };
+		24008B4D16977BF100C8AB03 /* UIButtonBarArrowLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B4516977BF100C8AB03 /* UIButtonBarArrowLeft.png */; };
+		24008B4E16977BF100C8AB03 /* UIButtonBarArrowLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B4616977BF100C8AB03 /* UIButtonBarArrowLeft@2x.png */; };
+		24008B4F16977BF100C8AB03 /* UIButtonBarArrowLeftLandscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B4716977BF100C8AB03 /* UIButtonBarArrowLeftLandscape.png */; };
+		24008B5016977BF100C8AB03 /* UIButtonBarArrowLeftLandscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B4816977BF100C8AB03 /* UIButtonBarArrowLeftLandscape@2x.png */; };
+		24008B5116977BF100C8AB03 /* UIButtonBarArrowRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B4916977BF100C8AB03 /* UIButtonBarArrowRight.png */; };
+		24008B5216977BF100C8AB03 /* UIButtonBarArrowRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B4A16977BF100C8AB03 /* UIButtonBarArrowRight@2x.png */; };
+		24008B5316977BF100C8AB03 /* UIButtonBarArrowRightLandscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B4B16977BF100C8AB03 /* UIButtonBarArrowRightLandscape.png */; };
+		24008B5416977BF100C8AB03 /* UIButtonBarArrowRightLandscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B4C16977BF100C8AB03 /* UIButtonBarArrowRightLandscape@2x.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24008B36169778A100C8AB03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24008B0A169775EA00C8AB03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24008B281697783E00C8AB03;
+			remoteInfo = DCTWebViewControllerBundle;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		24008B11169775EA00C8AB03 /* CopyFiles */ = {
@@ -30,7 +50,18 @@
 		24008B16169775EA00C8AB03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24008B1B169775EA00C8AB03 /* DCTWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCTWebViewController.h; sourceTree = "<group>"; };
 		24008B1D169775EA00C8AB03 /* DCTWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTWebViewController.m; sourceTree = "<group>"; };
-		24008B241697760900C8AB03 /* DCTWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCTWebViewController.xib; sourceTree = "<group>"; };
+		24008B291697783E00C8AB03 /* DCTWebViewController.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCTWebViewController.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		24008B2E1697783E00C8AB03 /* DCTWebViewControllerBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DCTWebViewControllerBundle-Info.plist"; sourceTree = "<group>"; };
+		24008B39169778E600C8AB03 /* DCTWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCTWebViewController.xib; sourceTree = "<group>"; };
+		24008B3B1697791200C8AB03 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		24008B4516977BF100C8AB03 /* UIButtonBarArrowLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarArrowLeft.png; sourceTree = "<group>"; };
+		24008B4616977BF100C8AB03 /* UIButtonBarArrowLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowLeft@2x.png"; sourceTree = "<group>"; };
+		24008B4716977BF100C8AB03 /* UIButtonBarArrowLeftLandscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarArrowLeftLandscape.png; sourceTree = "<group>"; };
+		24008B4816977BF100C8AB03 /* UIButtonBarArrowLeftLandscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowLeftLandscape@2x.png"; sourceTree = "<group>"; };
+		24008B4916977BF100C8AB03 /* UIButtonBarArrowRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarArrowRight.png; sourceTree = "<group>"; };
+		24008B4A16977BF100C8AB03 /* UIButtonBarArrowRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowRight@2x.png"; sourceTree = "<group>"; };
+		24008B4B16977BF100C8AB03 /* UIButtonBarArrowRightLandscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarArrowRightLandscape.png; sourceTree = "<group>"; };
+		24008B4C16977BF100C8AB03 /* UIButtonBarArrowRightLandscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowRightLandscape@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +69,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24008B3C1697791200C8AB03 /* UIKit.framework in Frameworks */,
 				24008B17169775EA00C8AB03 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24008B261697783E00C8AB03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				24008B18169775EA00C8AB03 /* DCTWebViewController */,
+				24008B2C1697783E00C8AB03 /* DCTWebViewControllerBundle */,
 				24008B15169775EA00C8AB03 /* Frameworks */,
 				24008B14169775EA00C8AB03 /* Products */,
 			);
@@ -58,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				24008B13169775EA00C8AB03 /* libDCTWebViewController.a */,
+				24008B291697783E00C8AB03 /* DCTWebViewController.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +106,7 @@
 		24008B15169775EA00C8AB03 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24008B3B1697791200C8AB03 /* UIKit.framework */,
 				24008B16169775EA00C8AB03 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -75,9 +117,25 @@
 			children = (
 				24008B1B169775EA00C8AB03 /* DCTWebViewController.h */,
 				24008B1D169775EA00C8AB03 /* DCTWebViewController.m */,
-				24008B241697760900C8AB03 /* DCTWebViewController.xib */,
 			);
 			path = DCTWebViewController;
+			sourceTree = "<group>";
+		};
+		24008B2C1697783E00C8AB03 /* DCTWebViewControllerBundle */ = {
+			isa = PBXGroup;
+			children = (
+				24008B4516977BF100C8AB03 /* UIButtonBarArrowLeft.png */,
+				24008B4616977BF100C8AB03 /* UIButtonBarArrowLeft@2x.png */,
+				24008B4716977BF100C8AB03 /* UIButtonBarArrowLeftLandscape.png */,
+				24008B4816977BF100C8AB03 /* UIButtonBarArrowLeftLandscape@2x.png */,
+				24008B4916977BF100C8AB03 /* UIButtonBarArrowRight.png */,
+				24008B4A16977BF100C8AB03 /* UIButtonBarArrowRight@2x.png */,
+				24008B4B16977BF100C8AB03 /* UIButtonBarArrowRightLandscape.png */,
+				24008B4C16977BF100C8AB03 /* UIButtonBarArrowRightLandscape@2x.png */,
+				24008B39169778E600C8AB03 /* DCTWebViewController.xib */,
+				24008B2E1697783E00C8AB03 /* DCTWebViewControllerBundle-Info.plist */,
+			);
+			path = DCTWebViewControllerBundle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,11 +152,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				24008B37169778A100C8AB03 /* PBXTargetDependency */,
 			);
 			name = DCTWebViewController;
 			productName = DCTWebViewController;
 			productReference = 24008B13169775EA00C8AB03 /* libDCTWebViewController.a */;
 			productType = "com.apple.product-type.library.static";
+		};
+		24008B281697783E00C8AB03 /* DCTWebViewControllerBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24008B331697783E00C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebViewControllerBundle" */;
+			buildPhases = (
+				24008B251697783E00C8AB03 /* Sources */,
+				24008B261697783E00C8AB03 /* Frameworks */,
+				24008B271697783E00C8AB03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DCTWebViewControllerBundle;
+			productName = DCTWebViewControllerBundle;
+			productReference = 24008B291697783E00C8AB03 /* DCTWebViewController.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -122,9 +198,29 @@
 			projectRoot = "";
 			targets = (
 				24008B12169775EA00C8AB03 /* DCTWebViewController */,
+				24008B281697783E00C8AB03 /* DCTWebViewControllerBundle */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24008B271697783E00C8AB03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24008B3A169778E600C8AB03 /* DCTWebViewController.xib in Resources */,
+				24008B4D16977BF100C8AB03 /* UIButtonBarArrowLeft.png in Resources */,
+				24008B4E16977BF100C8AB03 /* UIButtonBarArrowLeft@2x.png in Resources */,
+				24008B4F16977BF100C8AB03 /* UIButtonBarArrowLeftLandscape.png in Resources */,
+				24008B5016977BF100C8AB03 /* UIButtonBarArrowLeftLandscape@2x.png in Resources */,
+				24008B5116977BF100C8AB03 /* UIButtonBarArrowRight.png in Resources */,
+				24008B5216977BF100C8AB03 /* UIButtonBarArrowRight@2x.png in Resources */,
+				24008B5316977BF100C8AB03 /* UIButtonBarArrowRightLandscape.png in Resources */,
+				24008B5416977BF100C8AB03 /* UIButtonBarArrowRightLandscape@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		24008B0F169775EA00C8AB03 /* Sources */ = {
@@ -135,7 +231,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		24008B251697783E00C8AB03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24008B37169778A100C8AB03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24008B281697783E00C8AB03 /* DCTWebViewControllerBundle */;
+			targetProxy = 24008B36169778A100C8AB03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		24008B1F169775EA00C8AB03 /* Debug */ = {
@@ -207,6 +318,37 @@
 			};
 			name = Release;
 		};
+		24008B341697783E00C8AB03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "DCTWebViewControllerBundle/DCTWebViewControllerBundle-Info.plist";
+				PRODUCT_NAME = DCTWebViewController;
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		24008B351697783E00C8AB03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "DCTWebViewControllerBundle/DCTWebViewControllerBundle-Info.plist";
+				PRODUCT_NAME = DCTWebViewController;
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -224,6 +366,14 @@
 			buildConfigurations = (
 				24008B22169775EA00C8AB03 /* Debug */,
 				24008B23169775EA00C8AB03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		24008B331697783E00C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebViewControllerBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24008B341697783E00C8AB03 /* Debug */,
+				24008B351697783E00C8AB03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
