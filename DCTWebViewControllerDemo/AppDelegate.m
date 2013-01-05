@@ -14,7 +14,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://apple.com"]];
-	self.window.rootViewController = [[DCTWebViewController alloc] initWithRequest:request];
+	DCTWebViewController *webViewController = [[DCTWebViewController alloc] initWithRequest:request];
+	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:webViewController];
 	[self.window makeKeyAndVisible];
 	return YES;
 }

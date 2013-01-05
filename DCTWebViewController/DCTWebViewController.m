@@ -42,12 +42,26 @@
 	[self _updateButtons];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+
+	UINavigationController *navigationController = self.navigationController;
+	if (navigationController) {
+		[self.navigationController setToolbarHidden:NO animated:animated];
+		[self setToolbarItems:self.toolbar.items animated:animated];
+		self.webView.frame = self.view.bounds;
+		[self.toolbar removeFromSuperview];
+		[self.navigationBar removeFromSuperview];
+	}
+}
+
 - (void)viewDidLayoutSubviews {
 	[super viewDidLayoutSubviews];
 	
 }
 
 - (IBAction)refresh:(id)sender {
+	[self.webView reload];
 }
 
 - (IBAction)action:(id)sender {
