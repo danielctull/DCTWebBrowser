@@ -8,7 +8,7 @@
 
 #import "DCTWebViewController.h"
 
-@interface DCTWebViewController ()
+@interface DCTWebViewController () <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
@@ -84,6 +84,22 @@
 	self.nextButton.enabled = [self.webView canGoForward];
 	self.previousButton.enabled = [self.webView canGoBack];
 }
+
+#pragma mark - UIWebViewDelegate
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+	[self _updateButtons];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+	[self _updateButtons];
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+	[self _updateButtons];
+}
+
+#pragma mark - Bundle loading
 
 + (UIImage *)imageNamed:(NSString *)name {
 	NSInteger scale = (NSInteger)[[UIScreen mainScreen] scale];
