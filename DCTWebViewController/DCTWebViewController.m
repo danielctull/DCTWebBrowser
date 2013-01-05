@@ -12,7 +12,7 @@
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *previousButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *backButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *forwardButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *reloadButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *actionButton;
@@ -43,7 +43,7 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	self.previousButton.landscapeImagePhone = [[self class] imageNamed:@"UIButtonBarArrowLeftLandscape"];
+	self.backButton.landscapeImagePhone = [[self class] imageNamed:@"UIButtonBarArrowLeftLandscape"];
 	self.forwardButton.landscapeImagePhone = [[self class] imageNamed:@"UIButtonBarArrowRightLandscape"];
 	[_viewDidLoadTasks enumerateObjectsUsingBlock:^(void(^task)(DCTWebViewController *), NSUInteger i, BOOL *stop) {
 		task(self);
@@ -113,7 +113,7 @@
 
 - (void)updateButtons {
 	self.reloadButton.enabled = _canPerformAction;
-	self.previousButton.enabled = [self.webView canGoBack];
+	self.backButton.enabled = [self.webView canGoBack];
 	self.forwardButton.enabled = [self.webView canGoForward];
 	self.actionButton.enabled = _canPerformAction;
 }
