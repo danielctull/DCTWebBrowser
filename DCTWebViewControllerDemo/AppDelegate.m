@@ -12,12 +12,21 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	DCTWebViewController *webViewController = [DCTWebViewController new];
-	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:webViewController];
-	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://apple.com"]];
-	[webViewController loadRequest:request];
+
+	UIViewController *viewController = [UIViewController new];
+	self.window.rootViewController = viewController;
 	[self.window makeKeyAndVisible];
+
+	dispatch_async(dispatch_get_main_queue(), ^{
+		DCTWebViewController *webViewController = [DCTWebViewController new];
+		UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:webViewController];
+		NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://apple.com"]];
+		[webViewController loadRequest:request];
+		[viewController presentViewController:navigationController animated:YES completion:NULL];
+	});
+	
 	return YES;
 }
 

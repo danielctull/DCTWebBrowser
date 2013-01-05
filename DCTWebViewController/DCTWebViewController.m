@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *reloadButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *actionButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @end
 
 @implementation DCTWebViewController {
@@ -52,14 +53,22 @@
 	[super viewWillAppear:animated];
 
 	dispatch_once(&_toolbarToken, ^{
-		UINavigationController *navigationController = self.navigationController;
-		if (navigationController) {
+
+		if (self.presentingViewController)
+			self.navigationItem.leftBarButtonItem = self.doneButton;
+		
+		if (self.navigationController) {
 			[self.navigationController setToolbarHidden:NO animated:animated];
 			[self setToolbarItems:self.toolbar.items animated:animated];
 			self.webView.frame = self.view.bounds;
 			[self.toolbar removeFromSuperview];
 			[self.navigationBar removeFromSuperview];
-		}
+
+			if (self.presentingViewController)
+				self.navigationItem.leftBarButtonItem = self.doneButton;
+
+		} else if (self.presentingViewController)
+			self.navigationBar.topItem.leftBarButtonItem = self.doneButton;
 	});
 }
 
@@ -86,6 +95,7 @@
 }
 
 - (IBAction)done:(id)sender {
+	[self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)_updateButtons {
