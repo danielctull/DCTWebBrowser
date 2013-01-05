@@ -36,6 +36,7 @@
 		24008BCA1698385500C8AB03 /* EmbossedIcon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008BC51698385500C8AB03 /* EmbossedIcon~ipad.png */; };
 		24008BCB1698385500C8AB03 /* EmbossedIcon~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008BC61698385500C8AB03 /* EmbossedIcon~iphone.png */; };
 		24008BCC1698385500C8AB03 /* StandardError.html in Resources */ = {isa = PBXBuildFile; fileRef = 24008BC71698385500C8AB03 /* StandardError.html */; };
+		24B890E716987C1E00EF0D20 /* _DCTWebViewControllerActivityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B890E616987C1E00EF0D20 /* _DCTWebViewControllerActivityController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		24008BC51698385500C8AB03 /* EmbossedIcon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmbossedIcon~ipad.png"; sourceTree = "<group>"; };
 		24008BC61698385500C8AB03 /* EmbossedIcon~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmbossedIcon~iphone.png"; sourceTree = "<group>"; };
 		24008BC71698385500C8AB03 /* StandardError.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = StandardError.html; sourceTree = "<group>"; };
+		24B890E516987C1E00EF0D20 /* _DCTWebViewControllerActivityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DCTWebViewControllerActivityController.h; sourceTree = "<group>"; };
+		24B890E616987C1E00EF0D20 /* _DCTWebViewControllerActivityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DCTWebViewControllerActivityController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,8 @@
 			children = (
 				24008B1B169775EA00C8AB03 /* DCTWebViewController.h */,
 				24008B1D169775EA00C8AB03 /* DCTWebViewController.m */,
+				24B890E516987C1E00EF0D20 /* _DCTWebViewControllerActivityController.h */,
+				24B890E616987C1E00EF0D20 /* _DCTWebViewControllerActivityController.m */,
 			);
 			path = DCTWebViewController;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24008B1E169775EA00C8AB03 /* DCTWebViewController.m in Sources */,
+				24B890E716987C1E00EF0D20 /* _DCTWebViewControllerActivityController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

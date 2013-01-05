@@ -7,6 +7,7 @@
 //
 
 #import "DCTWebViewController.h"
+#import "_DCTWebViewControllerActivityController.h"
 
 @interface DCTWebViewController () <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
@@ -81,6 +82,9 @@
 }
 
 - (IBAction)action:(id)sender {
+	[_DCTWebViewControllerActivityController presentActivityItems:@[self.webView.request.URL]
+											   fromViewController:self
+													barButtonItem:sender];
 }
 
 - (IBAction)done:(id)sender {
