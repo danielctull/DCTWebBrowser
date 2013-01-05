@@ -24,9 +24,14 @@
 	dispatch_once_t _toolbarToken;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-	NSBundle *bundle = [[self class] bundle];
-	self = [super initWithNibName:@"DCTWebViewController" bundle:bundle];
+- (id)initWithNibName:(NSString *)name bundle:(NSBundle *)bundle {
+
+	if (name.length == 0) {
+		name = NSStringFromClass([self class]);
+		bundle = [[self class] bundle];
+	}
+
+	self = [super initWithNibName:name bundle:bundle];
 	if (!self) return nil;
 	_viewDidLoadTasks = [NSMutableArray new];
 	return self;
