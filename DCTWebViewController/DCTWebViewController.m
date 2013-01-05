@@ -96,24 +96,31 @@
 }
 
 - (void)loadRequest:(NSURLRequest *)request {
+	__weak DCTWebViewController *weakSelf = self;
 	[self _loadRequestBlock:^{
-		_canPerformAction = YES;
-		[self.webView loadRequest:request];
+		[weakSelf _setCanPerformAction:YES];
+		[weakSelf.webView loadRequest:request];
 	}];
 }
 
 - (void)loadHTMLString:(NSString *)string baseURL:(NSURL *)baseURL {
+	__weak DCTWebViewController *weakSelf = self;
 	[self _loadRequestBlock:^{
-		_canPerformAction = YES;
-		[self.webView loadHTMLString:string baseURL:baseURL];
+		[weakSelf _setCanPerformAction:YES];
+		[weakSelf.webView loadHTMLString:string baseURL:baseURL];
 	}];
 }
 
 - (void)loadData:(NSData *)data MIMEType:(NSString *)MIMEType textEncodingName:(NSString *)textEncodingName baseURL:(NSURL *)baseURL {
+	__weak DCTWebViewController *weakSelf = self;
 	[self _loadRequestBlock:^{
-		_canPerformAction = YES;
-		[self.webView loadData:data MIMEType:MIMEType textEncodingName:textEncodingName baseURL:baseURL];
+		[weakSelf _setCanPerformAction:YES];
+		[weakSelf.webView loadData:data MIMEType:MIMEType textEncodingName:textEncodingName baseURL:baseURL];
 	}];
+}
+
+- (void)_setCanPerformAction:(BOOL)canPerformAction {
+	_canPerformAction = canPerformAction;
 }
 
 - (void)_loadRequestBlock:(void(^)())block {
