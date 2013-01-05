@@ -21,13 +21,16 @@
 
 @implementation DCTWebViewController {
 	BOOL _canPerformAction;
-	void (^_request)();
+	NSMutableArray *_viewDidLoadTasks;
 	dispatch_once_t _toolbarToken;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	NSBundle *bundle = [[self class] bundle];
-	return [super initWithNibName:@"DCTWebViewController" bundle:bundle];
+	self = [super initWithNibName:@"DCTWebViewController" bundle:bundle];
+	if (!self) return nil;
+	_viewDidLoadTasks = [NSMutableArray new];
+	return self;
 }
 
 - (UIView *)rotatingHeaderView {
@@ -40,13 +43,13 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	[self _updateButtons];
 	self.previousButton.landscapeImagePhone = [[self class] imageNamed:@"UIButtonBarArrowLeftLandscape"];
 	self.nextButton.landscapeImagePhone = [[self class] imageNamed:@"UIButtonBarArrowRightLandscape"];
-	if (_request != NULL) {
-		_request();
-		_request = NULL;
-	}
+	[_viewDidLoadTasks enumerateObjectsUsingBlock:^(void(^task)(DCTWebViewController *), NSUInteger i, BOOL *stop) {
+		task(self);
+	}];
+	[_viewDidLoadTasks removeAllObjects];
+	[self updateButtons];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -98,7 +101,17 @@
 	[self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
 }
 
-- (void)_updateButtons {
+- (void)addViewDidLoadTask:(void(^)(DCTWebViewController *webViewController))task {
+
+	if (self.isViewLoaded) {
+		task(self);
+		return;
+	}
+
+	[_viewDidLoadTasks addObject:[task copy]];
+}
+
+- (void)updateButtons {
 	self.reloadButton.enabled = _canPerformAction;
 	self.previousButton.enabled = [self.webView canGoBack];
 	self.nextButton.enabled = [self.webView canGoForward];
@@ -106,39 +119,24 @@
 }
 
 - (void)loadRequest:(NSURLRequest *)request {
-	__weak DCTWebViewController *weakSelf = self;
-	[self _loadRequestBlock:^{
-		[weakSelf _setCanPerformAction:YES];
-		[weakSelf.webView loadRequest:request];
+	[self addViewDidLoadTask:^(DCTWebViewController *webViewController) {
+		webViewController->_canPerformAction = YES;
+		[webViewController.webView loadRequest:request];
 	}];
 }
 
 - (void)loadHTMLString:(NSString *)string baseURL:(NSURL *)baseURL {
-	__weak DCTWebViewController *weakSelf = self;
-	[self _loadRequestBlock:^{
-		[weakSelf _setCanPerformAction:YES];
-		[weakSelf.webView loadHTMLString:string baseURL:baseURL];
+	[self addViewDidLoadTask:^(DCTWebViewController *webViewController) {
+		webViewController->_canPerformAction = YES;
+		[webViewController.webView loadHTMLString:string baseURL:baseURL];
 	}];
 }
 
 - (void)loadData:(NSData *)data MIMEType:(NSString *)MIMEType textEncodingName:(NSString *)textEncodingName baseURL:(NSURL *)baseURL {
-	__weak DCTWebViewController *weakSelf = self;
-	[self _loadRequestBlock:^{
-		[weakSelf _setCanPerformAction:YES];
-		[weakSelf.webView loadData:data MIMEType:MIMEType textEncodingName:textEncodingName baseURL:baseURL];
+	[self addViewDidLoadTask:^(DCTWebViewController *webViewController) {
+		webViewController->_canPerformAction = YES;
+		[webViewController.webView loadData:data MIMEType:MIMEType textEncodingName:textEncodingName baseURL:baseURL];
 	}];
-}
-
-- (void)_setCanPerformAction:(BOOL)canPerformAction {
-	_canPerformAction = canPerformAction;
-}
-
-- (void)_loadRequestBlock:(void(^)())block {
-	if (self.isViewLoaded) {
-		block();
-		return;
-	}
-	_request = [block copy];
 }
 
 #pragma mark - UIWebViewDelegate
@@ -160,15 +158,15 @@
 
 	[self loadHTMLString:HTMLString baseURL:[bundle bundleURL]];
 	_canPerformAction = NO;
-	[self _updateButtons];
+	[self updateButtons];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-	[self _updateButtons];
+	[self updateButtons];
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
-	[self _updateButtons];
+	[self updateButtons];
 }
 
 #pragma mark - Bundle loading
