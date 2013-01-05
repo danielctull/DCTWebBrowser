@@ -10,7 +10,8 @@
 
 @interface DCTWebViewController : UIViewController
 
-- (id)initWithRequest:(NSURLRequest *)URLRequest;
-
+- (void)loadRequest:(NSURLRequest *)request;
+- (void)loadHTMLString:(NSString *)string baseURL:(NSURL *)baseURL;
+- (void)loadData:(NSData *)data MIMEType:(NSString *)MIMEType textEncodingName:(NSString *)textEncodingName baseURL:(NSURL *)baseURL;
 
 @end

@@ -31,6 +31,11 @@
 		24008B7016977F0700C8AB03 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B6F16977F0700C8AB03 /* Default-568h@2x.png */; };
 		24008B7416977F1500C8AB03 /* libDCTWebViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24008B13169775EA00C8AB03 /* libDCTWebViewController.a */; };
 		24008B7516977F2B00C8AB03 /* DCTWebViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24008B291697783E00C8AB03 /* DCTWebViewController.bundle */; };
+		24008BC81698385500C8AB03 /* EmbossedIcon@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008BC31698385400C8AB03 /* EmbossedIcon@2x~ipad.png */; };
+		24008BC91698385500C8AB03 /* EmbossedIcon@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008BC41698385400C8AB03 /* EmbossedIcon@2x~iphone.png */; };
+		24008BCA1698385500C8AB03 /* EmbossedIcon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008BC51698385500C8AB03 /* EmbossedIcon~ipad.png */; };
+		24008BCB1698385500C8AB03 /* EmbossedIcon~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008BC61698385500C8AB03 /* EmbossedIcon~iphone.png */; };
+		24008BCC1698385500C8AB03 /* StandardError.html in Resources */ = {isa = PBXBuildFile; fileRef = 24008BC71698385500C8AB03 /* StandardError.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +89,11 @@
 		24008B6B16977F0700C8AB03 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		24008B6D16977F0700C8AB03 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		24008B6F16977F0700C8AB03 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		24008BC31698385400C8AB03 /* EmbossedIcon@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmbossedIcon@2x~ipad.png"; sourceTree = "<group>"; };
+		24008BC41698385400C8AB03 /* EmbossedIcon@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmbossedIcon@2x~iphone.png"; sourceTree = "<group>"; };
+		24008BC51698385500C8AB03 /* EmbossedIcon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmbossedIcon~ipad.png"; sourceTree = "<group>"; };
+		24008BC61698385500C8AB03 /* EmbossedIcon~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmbossedIcon~iphone.png"; sourceTree = "<group>"; };
+		24008BC71698385500C8AB03 /* StandardError.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = StandardError.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +170,11 @@
 		24008B2C1697783E00C8AB03 /* DCTWebViewControllerBundle */ = {
 			isa = PBXGroup;
 			children = (
+				24008BC31698385400C8AB03 /* EmbossedIcon@2x~ipad.png */,
+				24008BC41698385400C8AB03 /* EmbossedIcon@2x~iphone.png */,
+				24008BC51698385500C8AB03 /* EmbossedIcon~ipad.png */,
+				24008BC61698385500C8AB03 /* EmbossedIcon~iphone.png */,
+				24008BC71698385500C8AB03 /* StandardError.html */,
 				24008B4516977BF100C8AB03 /* UIButtonBarArrowLeft.png */,
 				24008B4616977BF100C8AB03 /* UIButtonBarArrowLeft@2x.png */,
 				24008B4716977BF100C8AB03 /* UIButtonBarArrowLeftLandscape.png */,
@@ -295,6 +310,11 @@
 				24008B5216977BF100C8AB03 /* UIButtonBarArrowRight@2x.png in Resources */,
 				24008B5316977BF100C8AB03 /* UIButtonBarArrowRightLandscape.png in Resources */,
 				24008B5416977BF100C8AB03 /* UIButtonBarArrowRightLandscape@2x.png in Resources */,
+				24008BC81698385500C8AB03 /* EmbossedIcon@2x~ipad.png in Resources */,
+				24008BC91698385500C8AB03 /* EmbossedIcon@2x~iphone.png in Resources */,
+				24008BCA1698385500C8AB03 /* EmbossedIcon~ipad.png in Resources */,
+				24008BCB1698385500C8AB03 /* EmbossedIcon~iphone.png in Resources */,
+				24008BCC1698385500C8AB03 /* StandardError.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +523,7 @@
 				24008B23169775EA00C8AB03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24008B331697783E00C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebViewControllerBundle" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +532,7 @@
 				24008B351697783E00C8AB03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24008B7116977F0700C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebViewControllerDemo" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +541,7 @@
 				24008B7316977F0700C8AB03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

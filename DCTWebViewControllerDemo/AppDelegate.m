@@ -13,9 +13,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://apple.com"]];
-	DCTWebViewController *webViewController = [[DCTWebViewController alloc] initWithRequest:request];
+	DCTWebViewController *webViewController = [DCTWebViewController new];
 	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:webViewController];
+	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://apple.com"]];
+	[webViewController loadRequest:request];
 	[self.window makeKeyAndVisible];
 	return YES;
 }
