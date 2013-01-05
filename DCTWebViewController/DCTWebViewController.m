@@ -81,6 +81,21 @@
 	});
 }
 
+- (IBAction)reload:(id)sender {
+	[self.webView reload];
+	[self updateButtons];
+}
+
+- (IBAction)goBack:(id)sender {
+	[self.webView goBack];
+	[self updateButtons];
+}
+
+- (IBAction)goForward:(id)sender {
+	[self.webView goForward];
+	[self updateButtons];
+}
+
 - (IBAction)action:(id)sender {
 	[_DCTWebViewControllerActivityController presentActivityItems:@[self.webView.request.URL]
 											   fromViewController:self
@@ -101,11 +116,12 @@
 	[_viewDidLoadTasks addObject:[task copy]];
 }
 
-- (void)updateButtonsWithReloadEnabled:(BOOL)reloadEnabled actionEnabled:(BOOL)actionEnabled {
-	self.reloadButton.enabled = reloadEnabled;
+- (void)updateButtons {
+	BOOL enabled = ![self.webView.request.URL.path hasPrefix:self.class.bundle.bundleURL.path];
+	self.reloadButton.enabled = enabled;
+	self.actionButton.enabled = enabled;
 	self.backButton.enabled = [self.webView canGoBack];
 	self.forwardButton.enabled = [self.webView canGoForward];
-	self.actionButton.enabled = actionEnabled;
 }
 
 - (void)loadRequest:(NSURLRequest *)request {
@@ -146,10 +162,12 @@
 	[self loadHTMLString:HTMLString baseURL:[bundle bundleURL]];
 }
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-	BOOL enabled = ![request.URL.path hasPrefix:self.class.bundle.bundleURL.path];
-	[self updateButtonsWithReloadEnabled:enabled actionEnabled:enabled];
-	return YES;
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+	[self updateButtons];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+	[self updateButtons];
 }
 
 #pragma mark - Bundle loading
