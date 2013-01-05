@@ -20,7 +20,6 @@
 @end
 
 @implementation DCTWebViewController {
-	BOOL _canPerformAction;
 	NSMutableArray *_viewDidLoadTasks;
 	dispatch_once_t _toolbarToken;
 }
@@ -49,7 +48,6 @@
 		task(self);
 	}];
 	[_viewDidLoadTasks removeAllObjects];
-	[self updateButtons];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -88,12 +86,10 @@
 }
 
 - (IBAction)goBack:(id)sender {
-	_canPerformAction = YES;
 	[self.webView goBack];
 }
 
 - (IBAction)goForward:(id)sender {
-	_canPerformAction = YES;
 	[self.webView goForward];
 }
 
@@ -111,30 +107,27 @@
 	[_viewDidLoadTasks addObject:[task copy]];
 }
 
-- (void)updateButtons {
-	self.reloadButton.enabled = _canPerformAction;
+- (void)updateButtonsWithReloadEnabled:(BOOL)reloadEnabled actionEnabled:(BOOL)actionEnabled {
+	self.reloadButton.enabled = reloadEnabled;
 	self.backButton.enabled = [self.webView canGoBack];
 	self.forwardButton.enabled = [self.webView canGoForward];
-	self.actionButton.enabled = _canPerformAction;
+	self.actionButton.enabled = actionEnabled;
 }
 
 - (void)loadRequest:(NSURLRequest *)request {
 	[self addViewDidLoadTask:^(DCTWebViewController *webViewController) {
-		webViewController->_canPerformAction = YES;
 		[webViewController.webView loadRequest:request];
 	}];
 }
 
 - (void)loadHTMLString:(NSString *)string baseURL:(NSURL *)baseURL {
 	[self addViewDidLoadTask:^(DCTWebViewController *webViewController) {
-		webViewController->_canPerformAction = YES;
 		[webViewController.webView loadHTMLString:string baseURL:baseURL];
 	}];
 }
 
 - (void)loadData:(NSData *)data MIMEType:(NSString *)MIMEType textEncodingName:(NSString *)textEncodingName baseURL:(NSURL *)baseURL {
 	[self addViewDidLoadTask:^(DCTWebViewController *webViewController) {
-		webViewController->_canPerformAction = YES;
 		[webViewController.webView loadData:data MIMEType:MIMEType textEncodingName:textEncodingName baseURL:baseURL];
 	}];
 }
@@ -157,16 +150,15 @@
 	HTMLString = [HTMLString stringByReplacingOccurrencesOfString:@"%device%" withString:device];
 
 	[self loadHTMLString:HTMLString baseURL:[bundle bundleURL]];
-	_canPerformAction = NO;
-	[self updateButtons];
+	[self updateButtonsWithReloadEnabled:NO actionEnabled:NO];
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-	[self updateButtons];
-}
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
 
-- (void)webViewDidStartLoad:(UIWebView *)webView {
-	[self updateButtons];
+	if (navigationType < UIWebViewNavigationTypeOther)
+		[self updateButtonsWithReloadEnabled:YES actionEnabled:YES];
+
+	return YES;
 }
 
 #pragma mark - Bundle loading
