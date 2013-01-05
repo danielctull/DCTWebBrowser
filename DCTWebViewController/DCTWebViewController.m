@@ -76,10 +76,12 @@
 }
 
 - (IBAction)goBack:(id)sender {
+	_canPerformAction = YES;
 	[self.webView goBack];
 }
 
 - (IBAction)goForward:(id)sender {
+	_canPerformAction = YES;
 	[self.webView goForward];
 }
 
