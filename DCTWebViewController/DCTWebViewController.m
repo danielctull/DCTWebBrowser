@@ -40,6 +40,8 @@
 	[super viewDidLoad];
 	[self.webView loadRequest:_request];
 	[self _updateButtons];
+	self.previousButton.landscapeImagePhone = [[self class] imageNamed:@"UIButtonBarArrowLeftLandscape"];
+	self.nextButton.landscapeImagePhone = [[self class] imageNamed:@"UIButtonBarArrowRightLandscape"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
