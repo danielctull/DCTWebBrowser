@@ -80,7 +80,7 @@
 	
 }
 
-- (IBAction)refresh:(id)sender {
+- (IBAction)reload:(id)sender {
 	[self.webView reload];
 }
 
