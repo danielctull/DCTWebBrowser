@@ -73,24 +73,7 @@
 	});
 }
 
-- (void)viewDidLayoutSubviews {
-	[super viewDidLayoutSubviews];
-	
-}
-
-- (IBAction)reload:(id)sender {
-	[self.webView reload];
-}
-
 - (IBAction)action:(id)sender {
-}
-
-- (IBAction)goBack:(id)sender {
-	[self.webView goBack];
-}
-
-- (IBAction)goForward:(id)sender {
-	[self.webView goForward];
 }
 
 - (IBAction)done:(id)sender {
@@ -150,14 +133,11 @@
 	HTMLString = [HTMLString stringByReplacingOccurrencesOfString:@"%device%" withString:device];
 
 	[self loadHTMLString:HTMLString baseURL:[bundle bundleURL]];
-	[self updateButtonsWithReloadEnabled:NO actionEnabled:NO];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-
-	if (navigationType < UIWebViewNavigationTypeOther)
-		[self updateButtonsWithReloadEnabled:YES actionEnabled:YES];
-
+	BOOL enabled = ![request.URL.path hasPrefix:self.class.bundle.bundleURL.path];
+	[self updateButtonsWithReloadEnabled:enabled actionEnabled:enabled];
 	return YES;
 }
 

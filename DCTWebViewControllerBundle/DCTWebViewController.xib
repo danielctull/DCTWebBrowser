@@ -56,6 +56,7 @@
 								<int key="IBUISystemItemIdentifier">5</int>
 							</object>
 							<object class="IBUIBarButtonItem" id="973027761">
+								<bool key="IBUIEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<reference key="IBUIToolbar" ref="555777832"/>
 								<int key="IBUISystemItemIdentifier">13</int>
@@ -71,6 +72,7 @@
 								<int key="IBUISystemItemIdentifier">5</int>
 							</object>
 							<object class="IBUIBarButtonItem" id="666542846">
+								<bool key="IBUIEnabled">NO</bool>
 								<object class="NSCustomResource" key="IBUIImage">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">UIButtonBarArrowLeft.png</string>
@@ -89,6 +91,7 @@
 								<int key="IBUISystemItemIdentifier">5</int>
 							</object>
 							<object class="IBUIBarButtonItem" id="705568724">
+								<bool key="IBUIEnabled">NO</bool>
 								<object class="NSCustomResource" key="IBUIImage">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">UIButtonBarArrowRight.png</string>
@@ -107,6 +110,7 @@
 								<int key="IBUISystemItemIdentifier">5</int>
 							</object>
 							<object class="IBUIBarButtonItem" id="427569038">
+								<bool key="IBUIEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<reference key="IBUIToolbar" ref="555777832"/>
 								<int key="IBUISystemItemIdentifier">9</int>
@@ -248,11 +252,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">reload:</string>
+						<string key="label">reload</string>
 						<reference key="source" ref="973027761"/>
-						<reference key="destination" ref="372490531"/>
+						<reference key="destination" ref="838454234"/>
 					</object>
-					<int key="connectionID">49</int>
+					<int key="connectionID">52</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -272,19 +276,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">goForward:</string>
+						<string key="label">goForward</string>
 						<reference key="source" ref="705568724"/>
-						<reference key="destination" ref="372490531"/>
+						<reference key="destination" ref="838454234"/>
 					</object>
-					<int key="connectionID">42</int>
+					<int key="connectionID">51</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">goBack:</string>
+						<string key="label">goBack</string>
 						<reference key="source" ref="666542846"/>
-						<reference key="destination" ref="372490531"/>
+						<reference key="destination" ref="838454234"/>
 					</object>
-					<int key="connectionID">41</int>
+					<int key="connectionID">50</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -457,7 +461,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">49</int>
+			<int key="maxID">52</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -467,9 +471,6 @@
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="action:">id</string>
 						<string key="done:">id</string>
-						<string key="goBack:">id</string>
-						<string key="goForward:">id</string>
-						<string key="reload:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="action:">
@@ -478,18 +479,6 @@
 						</object>
 						<object class="IBActionInfo" key="done:">
 							<string key="name">done:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="goBack:">
-							<string key="name">goBack:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="goForward:">
-							<string key="name">goForward:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="reload:">
-							<string key="name">reload:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>
