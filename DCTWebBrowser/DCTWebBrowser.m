@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *reloadButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *actionButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @end
 
 @implementation DCTWebBrowser {
@@ -57,6 +58,7 @@
 	self.backButton.landscapeImagePhoneInsets = UIEdgeInsetsMake(2.0f, 0.0f, -2.0f, 0.0f);
 	self.forwardButton.landscapeImagePhone = [[self class] imageNamed:@"UIButtonBarArrowRightLandscape"];
 	self.forwardButton.landscapeImagePhoneInsets = UIEdgeInsetsMake(2.0f, 0.0f, -2.0f, 0.0f);
+	self.titleLabel.text = nil;
 	[_viewDidLoadTasks enumerateObjectsUsingBlock:^(void(^task)(DCTWebBrowser *), NSUInteger i, BOOL *stop) {
 		task(self);
 	}];
@@ -82,55 +84,7 @@
 
 		} else if (self.presentingViewController)
 			self.navigationBar.topItem.leftBarButtonItem = self.doneButton;
-
-		self.toolbarHidden = self.toolbarHidden;
 	});
-}
-
-- (void)setToolbarHidden:(BOOL)hidden {
-	[self setToolbarHidden:hidden animated:NO];
-}
-
-- (void)setToolbarHidden:(BOOL)hidden animated:(BOOL)animated {
-	_toolbarHidden = hidden;
-
-	if (self.navigationController) {
-		[self.navigationController setToolbarHidden:hidden animated:animated];
-		return;
-	}
-
-	CGFloat width = self.view.bounds.size.width;
-	CGFloat height = self.view.bounds.size.height;
-	CGFloat navigationBarHeight = self.navigationBar.bounds.size.height;
-	CGFloat toolbarHeight = self.toolbar.bounds.size.height;
-
-	CGRect toolbarHiddenRect = CGRectMake(0.0f,
-										  height,
-										  width,
-										  toolbarHeight);
-
-	CGRect webViewHiddenRect = CGRectMake(0.0f,
-										  navigationBarHeight,
-										  width,
-										  height - navigationBarHeight);
-
-	CGRect webViewShowingRect = CGRectMake(0.0f,
-										   navigationBarHeight,
-										   width,
-										   height - navigationBarHeight - toolbarHeight);
-	
-	CGRect toolbarShowingRect = CGRectMake(0.0f,
-										   height - toolbarHeight,
-										   width,
-										   toolbarHeight);
-
-	self.toolbar.hidden = NO;
-	[UIView animateWithDuration:(animated ? 1.0f/3.0f : 0.0f) animations:^{
-		self.toolbar.frame = hidden ? toolbarHiddenRect : toolbarShowingRect;
-		self.webView.frame = hidden ? webViewHiddenRect : webViewShowingRect;
-	} completion:^(BOOL finished) {
-		self.toolbar.hidden = hidden;
-	}];
 }
 
 - (IBAction)reload:(id)sender {
@@ -178,6 +132,7 @@
 
 - (void)loadRequest:(NSURLRequest *)request {
 	[self addViewDidLoadTask:^(DCTWebBrowser *webViewController) {
+		self.titleLabel.text = request.URL.absoluteString;
 		[webViewController.webView loadRequest:request];
 	}];
 }
@@ -219,6 +174,7 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
+	self.titleLabel.text = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 	[self updateButtons];
 }
 

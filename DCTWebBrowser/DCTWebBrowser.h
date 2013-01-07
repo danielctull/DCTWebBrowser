@@ -14,7 +14,4 @@
 - (void)loadHTMLString:(NSString *)string baseURL:(NSURL *)baseURL;
 - (void)loadData:(NSData *)data MIMEType:(NSString *)MIMEType textEncodingName:(NSString *)textEncodingName baseURL:(NSURL *)baseURL;
 
-@property (nonatomic, getter=isToolbarHidden) BOOL toolbarHidden; // Default is NO
-- (void)setToolbarHidden:(BOOL)hidden animated:(BOOL)animated;
-
 @end
