@@ -79,6 +79,10 @@
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">UIButtonBarArrowLeft.png</string>
 								</object>
+								<double key="IBUIImageInsets.top">1</double>
+								<double key="IBUIImageInsets.bottom">-1</double>
+								<double key="IBUIImageInsets.left">0.0</double>
+								<double key="IBUIImageInsets.right">0.0</double>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<reference key="IBUIToolbar" ref="555777832"/>
 							</object>
@@ -98,6 +102,10 @@
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">UIButtonBarArrowRight.png</string>
 								</object>
+								<double key="IBUIImageInsets.top">1</double>
+								<double key="IBUIImageInsets.bottom">-1</double>
+								<double key="IBUIImageInsets.left">0.0</double>
+								<double key="IBUIImageInsets.right">0.0</double>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<reference key="IBUIToolbar" ref="555777832"/>
 							</object>
@@ -177,19 +185,19 @@
 				<int key="IBUIStyle">2</int>
 				<int key="IBUISystemItemIdentifier">0</int>
 			</object>
-			<object class="IBUIView" id="602549759">
+			<object class="IBUIView" id="678258149">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUILabel" id="862948391">
-						<reference key="NSNextResponder" ref="602549759"/>
+					<object class="IBUILabel" id="101173820">
+						<reference key="NSNextResponder" ref="678258149"/>
 						<int key="NSvFlags">274</int>
 						<string key="NSFrameSize">{190, 40}</string>
-						<reference key="NSSuperview" ref="602549759"/>
+						<reference key="NSSuperview" ref="678258149"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor" id="856284482">
+						<object class="NSColor" key="IBUIBackgroundColor" id="393772560">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MCAwAA</bytes>
 						</object>
@@ -227,9 +235,9 @@
 				<string key="NSFrameSize">{190, 40}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="862948391"/>
+				<reference key="NSNextKeyView" ref="101173820"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
-				<reference key="IBUIBackgroundColor" ref="856284482"/>
+				<reference key="IBUIBackgroundColor" ref="393772560"/>
 				<bool key="IBUIOpaque">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
@@ -312,7 +320,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">titleLabel</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="862948391"/>
+						<reference key="destination" ref="101173820"/>
 					</object>
 					<int key="connectionID">60</int>
 				</object>
@@ -328,7 +336,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">titleView</string>
 						<reference key="source" ref="1037340384"/>
-						<reference key="destination" ref="602549759"/>
+						<reference key="destination" ref="678258149"/>
 					</object>
 					<int key="connectionID">58</int>
 				</object>
@@ -507,16 +515,16 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">56</int>
-						<reference key="object" ref="602549759"/>
+						<reference key="object" ref="678258149"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="862948391"/>
+							<reference ref="101173820"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">57</int>
-						<reference key="object" ref="862948391"/>
-						<reference key="parent" ref="602549759"/>
+						<reference key="object" ref="101173820"/>
+						<reference key="parent" ref="678258149"/>
 					</object>
 				</array>
 			</object>
