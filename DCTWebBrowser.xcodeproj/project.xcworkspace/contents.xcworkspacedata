@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:DCTWebViewController.xcodeproj">
+      location = "self:DCTWebBrowser.xcodeproj">
    </FileRef>
 </Workspace>

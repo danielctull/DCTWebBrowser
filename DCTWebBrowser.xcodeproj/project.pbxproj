@@ -29,8 +29,8 @@
 		24008B6C16977F0700C8AB03 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B6B16977F0700C8AB03 /* Default.png */; };
 		24008B6E16977F0700C8AB03 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B6D16977F0700C8AB03 /* Default@2x.png */; };
 		24008B7016977F0700C8AB03 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B6F16977F0700C8AB03 /* Default-568h@2x.png */; };
-		24008B7416977F1500C8AB03 /* libDCTWebViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24008B13169775EA00C8AB03 /* libDCTWebViewController.a */; };
-		24008B7516977F2B00C8AB03 /* DCTWebViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24008B291697783E00C8AB03 /* DCTWebViewController.bundle */; };
+		24008B7416977F1500C8AB03 /* libDCTWebBrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24008B13169775EA00C8AB03 /* libDCTWebBrowser.a */; };
+		24008B7516977F2B00C8AB03 /* DCTWebBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24008B291697783E00C8AB03 /* DCTWebBrowser.bundle */; };
 		24008BC81698385500C8AB03 /* EmbossedIcon@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008BC31698385400C8AB03 /* EmbossedIcon@2x~ipad.png */; };
 		24008BC91698385500C8AB03 /* EmbossedIcon@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008BC41698385400C8AB03 /* EmbossedIcon@2x~iphone.png */; };
 		24008BCA1698385500C8AB03 /* EmbossedIcon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008BC51698385500C8AB03 /* EmbossedIcon~ipad.png */; };
@@ -63,12 +63,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		24008B13169775EA00C8AB03 /* libDCTWebViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDCTWebViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		24008B13169775EA00C8AB03 /* libDCTWebBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDCTWebBrowser.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		24008B16169775EA00C8AB03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24008B1B169775EA00C8AB03 /* DCTWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCTWebViewController.h; sourceTree = "<group>"; };
 		24008B1D169775EA00C8AB03 /* DCTWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTWebViewController.m; sourceTree = "<group>"; };
-		24008B291697783E00C8AB03 /* DCTWebViewController.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCTWebViewController.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		24008B2E1697783E00C8AB03 /* DCTWebViewControllerBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DCTWebViewControllerBundle-Info.plist"; sourceTree = "<group>"; };
+		24008B291697783E00C8AB03 /* DCTWebBrowser.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCTWebBrowser.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		24008B2E1697783E00C8AB03 /* DCTWebBrowserBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DCTWebBrowserBundle-Info.plist"; sourceTree = "<group>"; };
 		24008B39169778E600C8AB03 /* DCTWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCTWebViewController.xib; sourceTree = "<group>"; };
 		24008B3B1697791200C8AB03 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24008B4516977BF100C8AB03 /* UIButtonBarArrowLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarArrowLeft.png; sourceTree = "<group>"; };
@@ -79,12 +79,12 @@
 		24008B4A16977BF100C8AB03 /* UIButtonBarArrowRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowRight@2x.png"; sourceTree = "<group>"; };
 		24008B4B16977BF100C8AB03 /* UIButtonBarArrowRightLandscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarArrowRightLandscape.png; sourceTree = "<group>"; };
 		24008B4C16977BF100C8AB03 /* UIButtonBarArrowRightLandscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowRightLandscape@2x.png"; sourceTree = "<group>"; };
-		24008B5916977F0700C8AB03 /* DCTWebViewControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCTWebViewControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24008B5916977F0700C8AB03 /* DCTWebBrowserDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCTWebBrowserDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24008B5D16977F0700C8AB03 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		24008B6116977F0700C8AB03 /* DCTWebViewControllerDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DCTWebViewControllerDemo-Info.plist"; sourceTree = "<group>"; };
+		24008B6116977F0700C8AB03 /* DCTWebBrowserDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DCTWebBrowserDemo-Info.plist"; sourceTree = "<group>"; };
 		24008B6316977F0700C8AB03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24008B6516977F0700C8AB03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		24008B6716977F0700C8AB03 /* DCTWebViewControllerDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DCTWebViewControllerDemo-Prefix.pch"; sourceTree = "<group>"; };
+		24008B6716977F0700C8AB03 /* DCTWebBrowserDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DCTWebBrowserDemo-Prefix.pch"; sourceTree = "<group>"; };
 		24008B6816977F0700C8AB03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		24008B6916977F0700C8AB03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		24008B6B16977F0700C8AB03 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24008B7416977F1500C8AB03 /* libDCTWebViewController.a in Frameworks */,
+				24008B7416977F1500C8AB03 /* libDCTWebBrowser.a in Frameworks */,
 				24008B5B16977F0700C8AB03 /* UIKit.framework in Frameworks */,
 				24008B5C16977F0700C8AB03 /* Foundation.framework in Frameworks */,
 				24008B5E16977F0700C8AB03 /* CoreGraphics.framework in Frameworks */,
@@ -144,9 +144,9 @@
 		24008B14169775EA00C8AB03 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24008B13169775EA00C8AB03 /* libDCTWebViewController.a */,
-				24008B291697783E00C8AB03 /* DCTWebViewController.bundle */,
-				24008B5916977F0700C8AB03 /* DCTWebViewControllerDemo.app */,
+				24008B13169775EA00C8AB03 /* libDCTWebBrowser.a */,
+				24008B291697783E00C8AB03 /* DCTWebBrowser.bundle */,
+				24008B5916977F0700C8AB03 /* DCTWebBrowserDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 				24008B4B16977BF100C8AB03 /* UIButtonBarArrowRightLandscape.png */,
 				24008B4C16977BF100C8AB03 /* UIButtonBarArrowRightLandscape@2x.png */,
 				24008B39169778E600C8AB03 /* DCTWebViewController.xib */,
-				24008B2E1697783E00C8AB03 /* DCTWebViewControllerBundle-Info.plist */,
+				24008B2E1697783E00C8AB03 /* DCTWebBrowserBundle-Info.plist */,
 			);
 			path = DCTWebViewControllerBundle;
 			sourceTree = "<group>";
@@ -207,10 +207,10 @@
 		24008B6016977F0700C8AB03 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				24008B6116977F0700C8AB03 /* DCTWebViewControllerDemo-Info.plist */,
+				24008B6116977F0700C8AB03 /* DCTWebBrowserDemo-Info.plist */,
 				24008B6216977F0700C8AB03 /* InfoPlist.strings */,
 				24008B6516977F0700C8AB03 /* main.m */,
-				24008B6716977F0700C8AB03 /* DCTWebViewControllerDemo-Prefix.pch */,
+				24008B6716977F0700C8AB03 /* DCTWebBrowserDemo-Prefix.pch */,
 				24008B6B16977F0700C8AB03 /* Default.png */,
 				24008B6D16977F0700C8AB03 /* Default@2x.png */,
 				24008B6F16977F0700C8AB03 /* Default-568h@2x.png */,
@@ -221,9 +221,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		24008B12169775EA00C8AB03 /* DCTWebViewController */ = {
+		24008B12169775EA00C8AB03 /* DCTWebBrowser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24008B21169775EA00C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebViewController" */;
+			buildConfigurationList = 24008B21169775EA00C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebBrowser" */;
 			buildPhases = (
 				24008B0F169775EA00C8AB03 /* Sources */,
 				24008B10169775EA00C8AB03 /* Frameworks */,
@@ -234,14 +234,14 @@
 			dependencies = (
 				24008B37169778A100C8AB03 /* PBXTargetDependency */,
 			);
-			name = DCTWebViewController;
+			name = DCTWebBrowser;
 			productName = DCTWebViewController;
-			productReference = 24008B13169775EA00C8AB03 /* libDCTWebViewController.a */;
+			productReference = 24008B13169775EA00C8AB03 /* libDCTWebBrowser.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		24008B281697783E00C8AB03 /* DCTWebViewControllerBundle */ = {
+		24008B281697783E00C8AB03 /* DCTWebBrowserBundle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24008B331697783E00C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebViewControllerBundle" */;
+			buildConfigurationList = 24008B331697783E00C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebBrowserBundle" */;
 			buildPhases = (
 				24008B251697783E00C8AB03 /* Sources */,
 				24008B261697783E00C8AB03 /* Frameworks */,
@@ -251,14 +251,14 @@
 			);
 			dependencies = (
 			);
-			name = DCTWebViewControllerBundle;
+			name = DCTWebBrowserBundle;
 			productName = DCTWebViewControllerBundle;
-			productReference = 24008B291697783E00C8AB03 /* DCTWebViewController.bundle */;
+			productReference = 24008B291697783E00C8AB03 /* DCTWebBrowser.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		24008B5816977F0700C8AB03 /* DCTWebViewControllerDemo */ = {
+		24008B5816977F0700C8AB03 /* DCTWebBrowserDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24008B7116977F0700C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebViewControllerDemo" */;
+			buildConfigurationList = 24008B7116977F0700C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebBrowserDemo" */;
 			buildPhases = (
 				24008B5516977F0700C8AB03 /* Sources */,
 				24008B5616977F0700C8AB03 /* Frameworks */,
@@ -268,9 +268,9 @@
 			);
 			dependencies = (
 			);
-			name = DCTWebViewControllerDemo;
+			name = DCTWebBrowserDemo;
 			productName = DCTWebViewControllerDemo;
-			productReference = 24008B5916977F0700C8AB03 /* DCTWebViewControllerDemo.app */;
+			productReference = 24008B5916977F0700C8AB03 /* DCTWebBrowserDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -282,7 +282,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Daniel Tull";
 			};
-			buildConfigurationList = 24008B0D169775EA00C8AB03 /* Build configuration list for PBXProject "DCTWebViewController" */;
+			buildConfigurationList = 24008B0D169775EA00C8AB03 /* Build configuration list for PBXProject "DCTWebBrowser" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -294,9 +294,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				24008B12169775EA00C8AB03 /* DCTWebViewController */,
-				24008B281697783E00C8AB03 /* DCTWebViewControllerBundle */,
-				24008B5816977F0700C8AB03 /* DCTWebViewControllerDemo */,
+				24008B12169775EA00C8AB03 /* DCTWebBrowser */,
+				24008B281697783E00C8AB03 /* DCTWebBrowserBundle */,
+				24008B5816977F0700C8AB03 /* DCTWebBrowserDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -331,7 +331,7 @@
 				24008B6C16977F0700C8AB03 /* Default.png in Resources */,
 				24008B6E16977F0700C8AB03 /* Default@2x.png in Resources */,
 				24008B7016977F0700C8AB03 /* Default-568h@2x.png in Resources */,
-				24008B7516977F2B00C8AB03 /* DCTWebViewController.bundle in Resources */,
+				24008B7516977F2B00C8AB03 /* DCTWebBrowser.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +368,7 @@
 /* Begin PBXTargetDependency section */
 		24008B37169778A100C8AB03 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 24008B281697783E00C8AB03 /* DCTWebViewControllerBundle */;
+			target = 24008B281697783E00C8AB03 /* DCTWebBrowserBundle */;
 			targetProxy = 24008B36169778A100C8AB03 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -438,7 +438,7 @@
 				DSTROOT = /tmp/DCTWebViewController.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DCTWebBrowser;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -449,7 +449,7 @@
 				DSTROOT = /tmp/DCTWebViewController.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DCTWebBrowser;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -461,8 +461,8 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				INFOPLIST_FILE = "DCTWebViewControllerBundle/DCTWebViewControllerBundle-Info.plist";
-				PRODUCT_NAME = DCTWebViewController;
+				INFOPLIST_FILE = "DCTWebViewControllerBundle/DCTWebBrowserBundle-Info.plist";
+				PRODUCT_NAME = DCTWebBrowser;
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -476,8 +476,8 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				INFOPLIST_FILE = "DCTWebViewControllerBundle/DCTWebViewControllerBundle-Info.plist";
-				PRODUCT_NAME = DCTWebViewController;
+				INFOPLIST_FILE = "DCTWebViewControllerBundle/DCTWebBrowserBundle-Info.plist";
+				PRODUCT_NAME = DCTWebBrowser;
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -488,9 +488,9 @@
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DCTWebViewControllerDemo/DCTWebViewControllerDemo-Prefix.pch";
-				INFOPLIST_FILE = "DCTWebViewControllerDemo/DCTWebViewControllerDemo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "DCTWebViewControllerDemo/DCTWebBrowserDemo-Prefix.pch";
+				INFOPLIST_FILE = "DCTWebViewControllerDemo/DCTWebBrowserDemo-Info.plist";
+				PRODUCT_NAME = DCTWebBrowserDemo;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -501,10 +501,10 @@
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DCTWebViewControllerDemo/DCTWebViewControllerDemo-Prefix.pch";
-				INFOPLIST_FILE = "DCTWebViewControllerDemo/DCTWebViewControllerDemo-Info.plist";
+				GCC_PREFIX_HEADER = "DCTWebViewControllerDemo/DCTWebBrowserDemo-Prefix.pch";
+				INFOPLIST_FILE = "DCTWebViewControllerDemo/DCTWebBrowserDemo-Info.plist";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DCTWebBrowserDemo;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -513,7 +513,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		24008B0D169775EA00C8AB03 /* Build configuration list for PBXProject "DCTWebViewController" */ = {
+		24008B0D169775EA00C8AB03 /* Build configuration list for PBXProject "DCTWebBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24008B1F169775EA00C8AB03 /* Debug */,
@@ -522,7 +522,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24008B21169775EA00C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebViewController" */ = {
+		24008B21169775EA00C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24008B22169775EA00C8AB03 /* Debug */,
@@ -531,7 +531,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24008B331697783E00C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebViewControllerBundle" */ = {
+		24008B331697783E00C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebBrowserBundle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24008B341697783E00C8AB03 /* Debug */,
@@ -540,7 +540,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24008B7116977F0700C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebViewControllerDemo" */ = {
+		24008B7116977F0700C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebBrowserDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24008B7216977F0700C8AB03 /* Debug */,
