@@ -75,7 +75,9 @@
 		
 		if (self.navigationController) {
 			[self setToolbarItems:self.toolbar.items animated:animated];
+			self.navigationController.toolbarHidden = NO;
 			self.webView.frame = self.view.bounds;
+			self.navigationItem.titleView = self.titleLabel;
 			[self.toolbar removeFromSuperview];
 			[self.navigationBar removeFromSuperview];
 
