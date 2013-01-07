@@ -70,12 +70,15 @@
 
 	dispatch_once(&_toolbarToken, ^{
 
-		if (self.presentingViewController)
+		BOOL shouldAnimate = animated;
+		if (self.presentingViewController) {
 			self.navigationItem.leftBarButtonItem = self.doneButton;
-		
+			shouldAnimate = NO;
+		}
+
 		if (self.navigationController) {
-			[self setToolbarItems:self.toolbar.items animated:animated];
-			[self.navigationController setToolbarHidden:NO animated:animated];
+			[self setToolbarItems:self.toolbar.items animated:shouldAnimate];
+			[self.navigationController setToolbarHidden:NO animated:shouldAnimate];
 			self.webView.frame = self.view.bounds;
 			self.navigationItem.titleView = self.titleLabel;
 			[self.toolbar removeFromSuperview];
