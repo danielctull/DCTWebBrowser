@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DCTWebViewController : UIViewController
+@interface DCTWebBrowser : UIViewController
 
 - (void)loadRequest:(NSURLRequest *)request;
 - (void)loadHTMLString:(NSString *)string baseURL:(NSURL *)baseURL;

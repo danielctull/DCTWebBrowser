@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import "_DCTWebViewControllerActivityController.h"
+#import "_DCTWebBrowserActivityController.h"
 #import <objc/runtime.h>
 
 void* _DCTWebViewControllerActivityControllerContext = &_DCTWebViewControllerActivityControllerContext;
 
-@interface _DCTWebViewControllerActivityController () <UIPopoverControllerDelegate>
+@interface _DCTWebBrowserActivityController () <UIPopoverControllerDelegate>
 @end
 
-@implementation _DCTWebViewControllerActivityController {
+@implementation _DCTWebBrowserActivityController {
 	UIPopoverController *_popoverController;
 }
 
@@ -30,7 +30,7 @@ void* _DCTWebViewControllerActivityControllerContext = &_DCTWebViewControllerAct
 		return;
 	}
 
-	_DCTWebViewControllerActivityController *controller = [self new];
+	_DCTWebBrowserActivityController *controller = [self new];
 	UIPopoverController *popoverController = [[UIPopoverController alloc] initWithContentViewController:activityViewController];
 	popoverController.delegate = controller;
 	controller->_popoverController = popoverController;

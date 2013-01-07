@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import "DCTWebViewController.h"
-#import "_DCTWebViewControllerActivityController.h"
+#import "DCTWebBrowser.h"
+#import "_DCTWebBrowserActivityController.h"
 
-@interface DCTWebViewController () <UIWebViewDelegate>
+@interface DCTWebBrowser () <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
@@ -20,7 +20,7 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @end
 
-@implementation DCTWebViewController {
+@implementation DCTWebBrowser {
 	NSMutableArray *_viewDidLoadTasks;
 	dispatch_once_t _toolbarToken;
 }
@@ -30,6 +30,7 @@
 	if (name.length == 0) {
 		name = NSStringFromClass([self class]);
 		bundle = [[self class] bundle];
+		NSLog(@"%@:%@ %@", self, NSStringFromSelector(_cmd), bundle);
 	}
 
 	self = [super initWithNibName:name bundle:bundle];
@@ -52,7 +53,7 @@
 	self.backButton.landscapeImagePhoneInsets = UIEdgeInsetsMake(2.0f, 0.0f, -2.0f, 0.0f);
 	self.forwardButton.landscapeImagePhone = [[self class] imageNamed:@"UIButtonBarArrowRightLandscape"];
 	self.forwardButton.landscapeImagePhoneInsets = UIEdgeInsetsMake(2.0f, 0.0f, -2.0f, 0.0f);
-	[_viewDidLoadTasks enumerateObjectsUsingBlock:^(void(^task)(DCTWebViewController *), NSUInteger i, BOOL *stop) {
+	[_viewDidLoadTasks enumerateObjectsUsingBlock:^(void(^task)(DCTWebBrowser *), NSUInteger i, BOOL *stop) {
 		task(self);
 	}];
 	[_viewDidLoadTasks removeAllObjects];
@@ -144,16 +145,16 @@
 }
 
 - (IBAction)action:(id)sender {
-	[_DCTWebViewControllerActivityController presentActivityItems:@[self.webView.request.URL]
-											   fromViewController:self
-													barButtonItem:sender];
+	[_DCTWebBrowserActivityController presentActivityItems:@[self.webView.request.URL]
+										fromViewController:self
+											 barButtonItem:sender];
 }
 
 - (IBAction)done:(id)sender {
 	[self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
 }
 
-- (void)addViewDidLoadTask:(void(^)(DCTWebViewController *webViewController))task {
+- (void)addViewDidLoadTask:(void(^)(DCTWebBrowser *webViewController))task {
 
 	if (self.isViewLoaded) {
 		task(self);
@@ -172,19 +173,19 @@
 }
 
 - (void)loadRequest:(NSURLRequest *)request {
-	[self addViewDidLoadTask:^(DCTWebViewController *webViewController) {
+	[self addViewDidLoadTask:^(DCTWebBrowser *webViewController) {
 		[webViewController.webView loadRequest:request];
 	}];
 }
 
 - (void)loadHTMLString:(NSString *)string baseURL:(NSURL *)baseURL {
-	[self addViewDidLoadTask:^(DCTWebViewController *webViewController) {
+	[self addViewDidLoadTask:^(DCTWebBrowser *webViewController) {
 		[webViewController.webView loadHTMLString:string baseURL:baseURL];
 	}];
 }
 
 - (void)loadData:(NSData *)data MIMEType:(NSString *)MIMEType textEncodingName:(NSString *)textEncodingName baseURL:(NSURL *)baseURL {
-	[self addViewDidLoadTask:^(DCTWebViewController *webViewController) {
+	[self addViewDidLoadTask:^(DCTWebBrowser *webViewController) {
 		[webViewController.webView loadData:data MIMEType:MIMEType textEncodingName:textEncodingName baseURL:baseURL];
 	}];
 }
@@ -241,8 +242,9 @@
 																		 options:NSDirectoryEnumerationSkipsHiddenFiles
 																	errorHandler:NULL];
 
+		NSString *bundleName = [NSString stringWithFormat:@"%@.bundle", NSStringFromClass([self class])];
 		for (NSURL *URL in enumerator)
-			if ([[URL lastPathComponent] isEqualToString:@"DCTWebViewController.bundle"])
+			if ([[URL lastPathComponent] isEqualToString:bundleName])
 				bundle = [NSBundle bundleWithURL:URL];
 	});
 	return bundle;

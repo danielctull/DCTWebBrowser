@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <DCTWebViewController/DCTWebViewController.h>
+#import <DCTWebBrowser/DCTWebBrowser.h>
 
 @implementation AppDelegate
 
@@ -20,12 +20,12 @@
 	[self.window makeKeyAndVisible];
 
 	dispatch_async(dispatch_get_main_queue(), ^{
-		DCTWebViewController *webViewController = [DCTWebViewController new];
+		DCTWebBrowser *webBrowser = [DCTWebBrowser new];
 		//UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:webViewController];
 		NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://apple.com"]];
-		[webViewController loadRequest:request];
+		[webBrowser loadRequest:request];
 		//webViewController.toolbarHidden = YES;
-		[viewController presentViewController:webViewController animated:YES completion:NULL];
+		[viewController presentViewController:webBrowser animated:YES completion:NULL];
 	});
 	
 	return YES;

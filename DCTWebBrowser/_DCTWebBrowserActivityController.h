@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface _DCTWebViewControllerActivityController : NSObject
+@interface _DCTWebBrowserActivityController : NSObject
 
 + (void)presentActivityItems:(NSArray *)activityItems
 		  fromViewController:(UIViewController *)viewController
