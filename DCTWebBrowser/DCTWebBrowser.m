@@ -28,9 +28,13 @@
 - (id)initWithNibName:(NSString *)name bundle:(NSBundle *)bundle {
 
 	if (name.length == 0) {
-		name = NSStringFromClass([self class]);
+
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+			name = [NSString stringWithFormat:@"%@_iPad", NSStringFromClass([self class])];
+		else
+			name = [NSString stringWithFormat:@"%@_iPhone", NSStringFromClass([self class])];
+
 		bundle = [[self class] bundle];
-		NSLog(@"%@:%@ %@", self, NSStringFromSelector(_cmd), bundle);
 	}
 
 	self = [super initWithNibName:name bundle:bundle];
