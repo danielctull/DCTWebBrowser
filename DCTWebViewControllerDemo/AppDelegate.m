@@ -21,10 +21,11 @@
 
 	dispatch_async(dispatch_get_main_queue(), ^{
 		DCTWebViewController *webViewController = [DCTWebViewController new];
-		UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:webViewController];
+		//UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:webViewController];
 		NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://apple.com"]];
 		[webViewController loadRequest:request];
-		[viewController presentViewController:navigationController animated:YES completion:NULL];
+		//webViewController.toolbarHidden = YES;
+		[viewController presentViewController:webViewController animated:YES completion:NULL];
 	});
 	
 	return YES;

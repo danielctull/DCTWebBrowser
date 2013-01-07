@@ -67,7 +67,6 @@
 			self.navigationItem.leftBarButtonItem = self.doneButton;
 		
 		if (self.navigationController) {
-			[self.navigationController setToolbarHidden:NO animated:animated];
 			[self setToolbarItems:self.toolbar.items animated:animated];
 			self.webView.frame = self.view.bounds;
 			[self.toolbar removeFromSuperview];
@@ -78,7 +77,55 @@
 
 		} else if (self.presentingViewController)
 			self.navigationBar.topItem.leftBarButtonItem = self.doneButton;
+
+		self.toolbarHidden = self.toolbarHidden;
 	});
+}
+
+- (void)setToolbarHidden:(BOOL)hidden {
+	[self setToolbarHidden:hidden animated:NO];
+}
+
+- (void)setToolbarHidden:(BOOL)hidden animated:(BOOL)animated {
+	_toolbarHidden = hidden;
+
+	if (self.navigationController) {
+		[self.navigationController setToolbarHidden:hidden animated:animated];
+		return;
+	}
+
+	CGFloat width = self.view.bounds.size.width;
+	CGFloat height = self.view.bounds.size.height;
+	CGFloat navigationBarHeight = self.navigationBar.bounds.size.height;
+	CGFloat toolbarHeight = self.toolbar.bounds.size.height;
+
+	CGRect toolbarHiddenRect = CGRectMake(0.0f,
+										  height,
+										  width,
+										  toolbarHeight);
+
+	CGRect webViewHiddenRect = CGRectMake(0.0f,
+										  navigationBarHeight,
+										  width,
+										  height - navigationBarHeight);
+
+	CGRect webViewShowingRect = CGRectMake(0.0f,
+										   navigationBarHeight,
+										   width,
+										   height - navigationBarHeight - toolbarHeight);
+	
+	CGRect toolbarShowingRect = CGRectMake(0.0f,
+										   height - toolbarHeight,
+										   width,
+										   toolbarHeight);
+
+	self.toolbar.hidden = NO;
+	[UIView animateWithDuration:(animated ? 1.0f/3.0f : 0.0f) animations:^{
+		self.toolbar.frame = hidden ? toolbarHiddenRect : toolbarShowingRect;
+		self.webView.frame = hidden ? webViewHiddenRect : webViewShowingRect;
+	} completion:^(BOOL finished) {
+		self.toolbar.hidden = hidden;
+	}];
 }
 
 - (IBAction)reload:(id)sender {
