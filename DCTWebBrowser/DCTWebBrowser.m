@@ -52,8 +52,14 @@
 	return self.toolbar;
 }
 
-- (UINavigationItem *)navigationItem {
+- (UINavigationItem *)navItem {
 	[self view];
+	return _navItem;
+}
+
+- (UINavigationItem *)navigationItem {
+	if (self.navigationController.viewControllers.count > 1)
+		self.navItem.leftBarButtonItem = nil;
 	return self.navItem;
 }
 

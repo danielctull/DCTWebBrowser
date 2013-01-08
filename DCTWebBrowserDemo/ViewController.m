@@ -13,7 +13,7 @@
 
 - (DCTWebBrowser *)newWebBrowser {
 	DCTWebBrowser *webBrowser = [DCTWebBrowser new];
-	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://t.co/dCJRhZqo"]];
+	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://apple.com"]];
 	[webBrowser loadRequest:request];
 	return webBrowser;
 }
@@ -29,6 +29,11 @@
 
 - (IBAction)presentWithoutNavigationController:(id)sender {
 	[self presentViewController:[self newWebBrowser] animated:YES completion:NULL];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[self.navigationController setToolbarHidden:YES animated:animated];
 }
 
 @end
