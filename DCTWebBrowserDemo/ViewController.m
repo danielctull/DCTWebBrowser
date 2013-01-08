@@ -24,11 +24,14 @@
 
 - (IBAction)presentWithNavigationController:(id)sender {
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[self newWebBrowser]];
+	navigationController.modalPresentationStyle = UIModalPresentationFormSheet;
 	[self presentViewController:navigationController animated:YES completion:NULL];
 }
 
 - (IBAction)presentWithoutNavigationController:(id)sender {
-	[self presentViewController:[self newWebBrowser] animated:YES completion:NULL];
+	UIViewController *vc = [self newWebBrowser];
+	vc.modalPresentationStyle = UIModalPresentationFormSheet;
+	[self presentViewController:vc animated:YES completion:NULL];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
