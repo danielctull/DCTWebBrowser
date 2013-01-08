@@ -7,26 +7,17 @@
 //
 
 #import "AppDelegate.h"
-#import <DCTWebBrowser/DCTWebBrowser.h>
+#import "ViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-	UIViewController *viewController = [UIViewController new];
-	self.window.rootViewController = viewController;
+	UIViewController *viewController = [ViewController new];
+	viewController.title = @"DCTWebBrowser";
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+	self.window.rootViewController = navigationController;
 	[self.window makeKeyAndVisible];
-
-	dispatch_async(dispatch_get_main_queue(), ^{
-		DCTWebBrowser *webBrowser = [DCTWebBrowser new];
-		UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:webBrowser];
-		NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://t.co/dCJRhZqo"]];
-		[webBrowser loadRequest:request];
-		[viewController presentViewController:navigationController animated:YES completion:NULL];
-	});
-	
 	return YES;
 }
 

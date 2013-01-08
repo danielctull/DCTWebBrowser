@@ -34,6 +34,8 @@
 		24008BCA1698385500C8AB03 /* EmbossedIcon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008BC51698385500C8AB03 /* EmbossedIcon~ipad.png */; };
 		24008BCB1698385500C8AB03 /* EmbossedIcon~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008BC61698385500C8AB03 /* EmbossedIcon~iphone.png */; };
 		24008BCC1698385500C8AB03 /* StandardError.html in Resources */ = {isa = PBXBuildFile; fileRef = 24008BC71698385500C8AB03 /* StandardError.html */; };
+		240B500C169C539C003A55D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B500A169C539C003A55D7 /* ViewController.m */; };
+		240B500D169C539C003A55D7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240B500B169C539C003A55D7 /* ViewController.xib */; };
 		24487996169B2390004AC9A1 /* DCTWebBrowser_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24487995169B2390004AC9A1 /* DCTWebBrowser_iPad.xib */; };
 		249C35BE169B20DD005DF695 /* DCTWebBrowser.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24008B1B169775EA00C8AB03 /* DCTWebBrowser.h */; };
 		24B890E716987C1E00EF0D20 /* _DCTWebBrowserActivityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B890E616987C1E00EF0D20 /* _DCTWebBrowserActivityController.m */; };
@@ -96,6 +98,9 @@
 		24008BC51698385500C8AB03 /* EmbossedIcon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmbossedIcon~ipad.png"; sourceTree = "<group>"; };
 		24008BC61698385500C8AB03 /* EmbossedIcon~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmbossedIcon~iphone.png"; sourceTree = "<group>"; };
 		24008BC71698385500C8AB03 /* StandardError.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = StandardError.html; sourceTree = "<group>"; };
+		240B5009169C539C003A55D7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		240B500A169C539C003A55D7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		240B500B169C539C003A55D7 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		24487995169B2390004AC9A1 /* DCTWebBrowser_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCTWebBrowser_iPad.xib; sourceTree = "<group>"; };
 		24B890E516987C1E00EF0D20 /* _DCTWebBrowserActivityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DCTWebBrowserActivityController.h; sourceTree = "<group>"; };
 		24B890E616987C1E00EF0D20 /* _DCTWebBrowserActivityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DCTWebBrowserActivityController.m; sourceTree = "<group>"; };
@@ -202,6 +207,9 @@
 			children = (
 				24008B6816977F0700C8AB03 /* AppDelegate.h */,
 				24008B6916977F0700C8AB03 /* AppDelegate.m */,
+				240B5009169C539C003A55D7 /* ViewController.h */,
+				240B500A169C539C003A55D7 /* ViewController.m */,
+				240B500B169C539C003A55D7 /* ViewController.xib */,
 				24008B6016977F0700C8AB03 /* Supporting Files */,
 			);
 			path = DCTWebBrowserDemo;
@@ -336,6 +344,7 @@
 				24008B6E16977F0700C8AB03 /* Default@2x.png in Resources */,
 				24008B7016977F0700C8AB03 /* Default-568h@2x.png in Resources */,
 				24E256C3169B2232001DC894 /* DCTWebBrowser.bundle in Resources */,
+				240B500D169C539C003A55D7 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +373,7 @@
 			files = (
 				24008B6616977F0700C8AB03 /* main.m in Sources */,
 				24008B6A16977F0700C8AB03 /* AppDelegate.m in Sources */,
+				240B500C169C539C003A55D7 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
