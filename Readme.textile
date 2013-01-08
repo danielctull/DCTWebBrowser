@@ -6,6 +6,13 @@ DCTWebBrowser is a UIViewController subclass to act as an internal browser for a
 
 The single class can be modally presented (on its own or as the root of a UINavigationController) or pushed onto a UINavigationController stack.
 
+h2. Adding DCTWebBrowser to your app
+
+# Drop *DCTWebBrowser.xcodeproj* into your application's project
+# Add libDCTWebBrowser.a in the *Link Binary With Libraries* build phase for your app's target
+# Add DCTWebBrowser.bundle (found in the Products group in DCTWebBrowser.xcodeproj) to the *Copy Bundle Resources* build phase for your app's target
+# Add @#import <DCTWebBrowser/DCTWebBrowser.h>@ when you want to use it
+
 h2. Use
 
 The Xcode project includes a demo target, to show the different ways a DCTWebBrowser can be displayed. It's flexible enough to be able to be both pushed and presented on its own or as the root view controller of a UINavigationController. The following yield very similar results:
