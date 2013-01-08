@@ -17,8 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *forwardButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *reloadButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *actionButton;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UINavigationItem *navItem;
 @end
 
 @implementation DCTWebBrowser {
@@ -52,6 +52,11 @@
 	return self.toolbar;
 }
 
+- (UINavigationItem *)navigationItem {
+	[self view];
+	return self.navItem;
+}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	self.backButton.landscapeImagePhone = [[self class] imageNamed:@"UIButtonBarArrowLeftLandscape"];
@@ -72,23 +77,18 @@
 
 		BOOL shouldAnimate = animated;
 		if (self.presentingViewController) {
-			self.navigationItem.leftBarButtonItem = self.doneButton;
 			shouldAnimate = NO;
 		}
 
 		if (self.navigationController) {
-			[self setToolbarItems:self.toolbar.items animated:shouldAnimate];
-			[self.navigationController setToolbarHidden:NO animated:shouldAnimate];
+			if (self.toolbar.items.count > 0) {
+				[self setToolbarItems:self.toolbar.items animated:shouldAnimate];
+				[self.navigationController setToolbarHidden:!self.toolbar.items animated:shouldAnimate];
+			}
 			self.webView.frame = self.view.bounds;
-			self.navigationItem.titleView = self.titleLabel;
 			[self.toolbar removeFromSuperview];
 			[self.navigationBar removeFromSuperview];
-
-			if (self.presentingViewController)
-				self.navigationItem.leftBarButtonItem = self.doneButton;
-
-		} else if (self.presentingViewController)
-			self.navigationBar.topItem.leftBarButtonItem = self.doneButton;
+		}
 	});
 }
 

@@ -22,7 +22,7 @@
 	dispatch_async(dispatch_get_main_queue(), ^{
 		DCTWebBrowser *webBrowser = [DCTWebBrowser new];
 		UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:webBrowser];
-		NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://apple.com"]];
+		NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://t.co/dCJRhZqo"]];
 		[webBrowser loadRequest:request];
 		[viewController presentViewController:navigationController animated:YES completion:NULL];
 	});
