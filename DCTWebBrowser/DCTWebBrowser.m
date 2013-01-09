@@ -115,6 +115,7 @@
 
 - (IBAction)action:(id)sender {
 	[_DCTWebBrowserActivityController presentActivityItems:@[self.webView.request.URL]
+									 applicationActivities:self.applicationActivities
 										fromViewController:self
 											 barButtonItem:sender];
 }

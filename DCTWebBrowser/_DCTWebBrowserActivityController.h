@@ -11,6 +11,7 @@
 @interface _DCTWebBrowserActivityController : NSObject
 
 + (void)presentActivityItems:(NSArray *)activityItems
+	   applicationActivities:(NSArray *)applicationActivities
 		  fromViewController:(UIViewController *)viewController
 			   barButtonItem:(UIBarButtonItem *)item;
 

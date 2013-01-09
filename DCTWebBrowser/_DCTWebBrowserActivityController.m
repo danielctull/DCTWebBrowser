@@ -19,11 +19,12 @@ void* _DCTWebViewControllerActivityControllerContext = &_DCTWebViewControllerAct
 }
 
 + (void)presentActivityItems:(NSArray *)activityItems
+	   applicationActivities:(NSArray *)applicationActivities
 		  fromViewController:(UIViewController *)viewController
 			   barButtonItem:(UIBarButtonItem *)item {
 
 	UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems
-																						 applicationActivities:nil];
+																						 applicationActivities:applicationActivities];
 
 	if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
 		[viewController presentViewController:activityViewController animated:YES completion:NULL];

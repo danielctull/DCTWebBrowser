@@ -14,4 +14,6 @@
 - (void)loadHTMLString:(NSString *)string baseURL:(NSURL *)baseURL;
 - (void)loadData:(NSData *)data MIMEType:(NSString *)MIMEType textEncodingName:(NSString *)textEncodingName baseURL:(NSURL *)baseURL;
 
+@property (nonatomic, copy) NSArray *applicationActivities;
+
 @end
