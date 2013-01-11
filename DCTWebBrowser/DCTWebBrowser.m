@@ -17,7 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *forwardButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *reloadButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *actionButton;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UINavigationItem *navItem;
 @end
 
@@ -61,6 +62,20 @@
 	if (self.navigationController.viewControllers.count > 1)
 		self.navItem.leftBarButtonItem = nil;
 	return self.navItem;
+}
+
+- (void)setShowDoneButton:(BOOL)showDoneButton {
+	_showDoneButton = showDoneButton;
+	[self addViewDidLoadTask:^(DCTWebBrowser *webViewController) {
+		webViewController.navigationItem.leftBarButtonItem = showDoneButton ? self.doneButton : nil;
+	}];
+}
+
+- (void)setShowTitle:(BOOL)showTitle {
+	_showTitle = showTitle;
+	[self addViewDidLoadTask:^(DCTWebBrowser *webViewController) {
+		webViewController.navigationItem.titleView = showTitle ? self.titleLabel : nil;
+	}];
 }
 
 - (void)viewDidLoad {
