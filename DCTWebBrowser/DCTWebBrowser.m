@@ -64,17 +64,17 @@
 	return self.navItem;
 }
 
-- (void)setShowDoneButton:(BOOL)showDoneButton {
-	_showDoneButton = showDoneButton;
+- (void)setDoneButtonHidden:(BOOL)doneButtonHidden {
+	_doneButtonHidden = doneButtonHidden;
 	[self addViewDidLoadTask:^(DCTWebBrowser *webViewController) {
-		webViewController.navigationItem.leftBarButtonItem = showDoneButton ? self.doneButton : nil;
+		webViewController.navigationItem.leftBarButtonItem = doneButtonHidden ? nil : self.doneButton;
 	}];
 }
 
-- (void)setShowTitle:(BOOL)showTitle {
-	_showTitle = showTitle;
+- (void)setTitleHidden:(BOOL)titleHidden {
+	_titleHidden = titleHidden;
 	[self addViewDidLoadTask:^(DCTWebBrowser *webViewController) {
-		webViewController.navigationItem.titleView = showTitle ? self.titleLabel : nil;
+		webViewController.navigationItem.titleView = titleHidden ? nil : self.titleLabel;
 	}];
 }
 

@@ -15,7 +15,7 @@
 - (void)loadData:(NSData *)data MIMEType:(NSString *)MIMEType textEncodingName:(NSString *)textEncodingName baseURL:(NSURL *)baseURL;
 
 @property (nonatomic, copy) NSArray *applicationActivities;
-@property (nonatomic, assign) BOOL showDoneButton;
-@property (nonatomic, assign) BOOL showTitle;
+@property (nonatomic, assign) BOOL doneButtonHidden;
+@property (nonatomic, assign) BOOL titleHidden;
 
 @end
