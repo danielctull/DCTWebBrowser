@@ -66,15 +66,15 @@
 
 - (void)setDoneButtonHidden:(BOOL)doneButtonHidden {
 	_doneButtonHidden = doneButtonHidden;
-	[self addViewDidLoadTask:^(DCTWebBrowser *webViewController) {
-		webViewController.navigationItem.leftBarButtonItem = doneButtonHidden ? nil : self.doneButton;
+	[self addViewDidLoadTask:^(DCTWebBrowser *webBrowser) {
+		webBrowser.navigationItem.leftBarButtonItem = doneButtonHidden ? nil : webBrowser.doneButton;
 	}];
 }
 
 - (void)setTitleHidden:(BOOL)titleHidden {
 	_titleHidden = titleHidden;
-	[self addViewDidLoadTask:^(DCTWebBrowser *webViewController) {
-		webViewController.navigationItem.titleView = titleHidden ? nil : self.titleLabel;
+	[self addViewDidLoadTask:^(DCTWebBrowser *webBrowser) {
+		webBrowser.navigationItem.titleView = titleHidden ? nil : webBrowser.titleLabel;
 	}];
 }
 
@@ -158,9 +158,9 @@
 }
 
 - (void)loadRequest:(NSURLRequest *)request {
-	[self addViewDidLoadTask:^(DCTWebBrowser *webViewController) {
-		self.titleLabel.text = request.URL.absoluteString;
-		[webViewController.webView loadRequest:request];
+	[self addViewDidLoadTask:^(DCTWebBrowser *webBrowser) {
+		webBrowser.titleLabel.text = request.URL.absoluteString;
+		[webBrowser.webView loadRequest:request];
 	}];
 }
 
