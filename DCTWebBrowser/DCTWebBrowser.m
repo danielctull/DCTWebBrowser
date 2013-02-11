@@ -27,6 +27,11 @@
 	dispatch_once_t _toolbarToken;
 }
 
+- (void)dealloc {
+	self.webView.delegate = nil;
+	[self.webView stopLoading];
+}
+
 - (id)initWithNibName:(NSString *)name bundle:(NSBundle *)bundle {
 
 	if (name.length == 0) {
@@ -89,6 +94,12 @@
 		task(self);
 	}];
 	[_viewDidLoadTasks removeAllObjects];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+	[super viewWillDisappear:animated];
+	self.webView.delegate = nil;
+	[self.webView stopLoading];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
