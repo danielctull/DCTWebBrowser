@@ -180,6 +180,9 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
 
+	if ([error.domain isEqualToString:NSURLErrorDomain] && error.code == NSURLErrorCancelled)
+		return;
+
 	NSBundle *bundle = [[self class] bundle];
 	NSURL *formatHTMLURL = [bundle URLForResource:@"StandardError" withExtension:@"html"];
 
