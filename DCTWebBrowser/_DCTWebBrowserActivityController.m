@@ -12,11 +12,10 @@
 void* _DCTWebViewControllerActivityControllerContext = &_DCTWebViewControllerActivityControllerContext;
 
 @interface _DCTWebBrowserActivityController () <UIPopoverControllerDelegate>
+@property (nonatomic, strong) UIPopoverController *popoverController;
 @end
 
-@implementation _DCTWebBrowserActivityController {
-	UIPopoverController *_popoverController;
-}
+@implementation _DCTWebBrowserActivityController
 
 + (void)presentActivityItems:(NSArray *)activityItems
 	   applicationActivities:(NSArray *)applicationActivities
@@ -34,7 +33,7 @@ void* _DCTWebViewControllerActivityControllerContext = &_DCTWebViewControllerAct
 	_DCTWebBrowserActivityController *controller = [self new];
 	UIPopoverController *popoverController = [[UIPopoverController alloc] initWithContentViewController:activityViewController];
 	popoverController.delegate = controller;
-	controller->_popoverController = popoverController;
+	controller.popoverController = popoverController;
 	objc_setAssociatedObject(popoverController, _DCTWebViewControllerActivityControllerContext, controller, OBJC_ASSOCIATION_RETAIN);
 	[popoverController presentPopoverFromBarButtonItem:item
 							  permittedArrowDirections:UIPopoverArrowDirectionAny
@@ -43,7 +42,7 @@ void* _DCTWebViewControllerActivityControllerContext = &_DCTWebViewControllerAct
 }
 
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
-	_popoverController = nil;
+	self.popoverController = nil;
 }
 
 @end
