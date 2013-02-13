@@ -13,6 +13,7 @@
 - (void)loadRequest:(NSURLRequest *)request;
 - (void)loadHTMLString:(NSString *)string baseURL:(NSURL *)baseURL;
 - (void)loadData:(NSData *)data MIMEType:(NSString *)MIMEType textEncodingName:(NSString *)textEncodingName baseURL:(NSURL *)baseURL;
+- (void)evaluateJavaScriptFromString:(NSString *)script completion:(void(^)(NSString *))completion;
 
 @property (nonatomic, copy) NSArray *applicationActivities;
 @property (nonatomic, assign) BOOL doneButtonHidden;

@@ -20,16 +20,17 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UINavigationItem *navItem;
+@property (nonatomic, strong) NSMutableArray *viewDidLoadTasks;
+@property (nonatomic, strong) NSMutableArray *webViewDidLoadTasks;
 @end
 
 @implementation DCTWebBrowser {
-	NSMutableArray *_viewDidLoadTasks;
 	dispatch_once_t _toolbarToken;
 }
 
 - (void)dealloc {
-	self.webView.delegate = nil;
-	[self.webView stopLoading];
+	_webView.delegate = nil;
+	[_webView stopLoading];
 }
 
 - (id)initWithNibName:(NSString *)name bundle:(NSBundle *)bundle {
@@ -47,6 +48,7 @@
 	self = [super initWithNibName:name bundle:bundle];
 	if (!self) return nil;
 	_viewDidLoadTasks = [NSMutableArray new];
+	_webViewDidLoadTasks = [NSMutableArray new];
 	return self;
 }
 
@@ -90,10 +92,10 @@
 	self.forwardButton.landscapeImagePhone = [[self class] imageNamed:@"UIButtonBarArrowRightLandscape"];
 	self.forwardButton.landscapeImagePhoneInsets = UIEdgeInsetsMake(2.0f, 0.0f, -2.0f, 0.0f);
 	self.titleLabel.text = nil;
-	[_viewDidLoadTasks enumerateObjectsUsingBlock:^(void(^task)(DCTWebBrowser *), NSUInteger i, BOOL *stop) {
+	[self.viewDidLoadTasks enumerateObjectsUsingBlock:^(void(^task)(DCTWebBrowser *), NSUInteger i, BOOL *stop) {
 		task(self);
 	}];
-	[_viewDidLoadTasks removeAllObjects];
+	[self.viewDidLoadTasks removeAllObjects];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -157,7 +159,17 @@
 		return;
 	}
 
-	[_viewDidLoadTasks addObject:[task copy]];
+	[self.viewDidLoadTasks addObject:[task copy]];
+}
+
+- (void)addWebViewDidLoadTask:(void(^)(DCTWebBrowser *webViewController))task {
+
+	if (self.webView && !self.webView.loading) {
+		task(self);
+		return;
+	}
+
+	[self.webViewDidLoadTasks addObject:[task copy]];
 }
 
 - (void)updateButtons {
@@ -166,6 +178,13 @@
 	self.actionButton.enabled = enabled;
 	self.backButton.enabled = [self.webView canGoBack];
 	self.forwardButton.enabled = [self.webView canGoForward];
+}
+
+- (void)evaluateJavaScriptFromString:(NSString *)script completion:(void(^)(NSString *))completion {
+	[self addWebViewDidLoadTask:^(DCTWebBrowser *webViewController) {
+		NSString *string = [webViewController.webView stringByEvaluatingJavaScriptFromString:script];
+		if (completion) completion(string);
+	}];
 }
 
 - (void)loadRequest:(NSURLRequest *)request {
@@ -217,6 +236,11 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
 	self.titleLabel.text = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 	[self updateButtons];
+
+	[self.webViewDidLoadTasks enumerateObjectsUsingBlock:^(void(^task)(DCTWebBrowser *), NSUInteger i, BOOL *stop) {
+		task(self);
+	}];
+	[self.webViewDidLoadTasks removeAllObjects];
 }
 
 #pragma mark - Bundle loading
