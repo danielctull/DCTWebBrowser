@@ -12,6 +12,7 @@
 
 + (void)presentActivityItems:(NSArray *)activityItems
 	   applicationActivities:(NSArray *)applicationActivities
+	   excludedActivityTypes:(NSArray *)excludedActivityTypes
 		  fromViewController:(UIViewController *)viewController
 			   barButtonItem:(UIBarButtonItem *)item;
 

@@ -170,6 +170,7 @@
 - (IBAction)action:(id)sender {
 	[_DCTWebBrowserActivityController presentActivityItems:@[self.webView.request.URL]
 									 applicationActivities:self.applicationActivities
+									 excludedActivityTypes:self.excludedActivityTypes
 										fromViewController:self
 											 barButtonItem:sender];
 }

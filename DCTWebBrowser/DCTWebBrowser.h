@@ -16,6 +16,8 @@
 - (void)evaluateJavaScriptFromString:(NSString *)script completion:(void(^)(NSString *))completion;
 
 @property (nonatomic, copy) NSArray *applicationActivities;
+@property (nonatomic, copy) NSArray *excludedActivityTypes; // default is nil. activity types listed will not be displayed
+
 @property (nonatomic, assign) BOOL doneButtonHidden;
 @property (nonatomic, assign) BOOL titleHidden;
 
