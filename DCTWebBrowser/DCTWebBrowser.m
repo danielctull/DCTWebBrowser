@@ -22,6 +22,7 @@
 @property (strong, nonatomic) IBOutlet UINavigationItem *navItem;
 @property (nonatomic, strong) NSMutableArray *viewDidLoadTasks;
 @property (nonatomic, strong) NSMutableArray *webViewDidLoadTasks;
+@property (nonatomic, assign) BOOL toolbarHiddenOnAppearing;
 @end
 
 @implementation DCTWebBrowser {
@@ -121,6 +122,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
+	[self.navigationController setToolbarHidden:self.toolbarHiddenOnAppearing animated:YES];
 	UIWebView *webView = self.webView;
 	webView.delegate = nil;
 	[webView stopLoading];
@@ -129,12 +131,14 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 
+	self.toolbarHiddenOnAppearing = self.navigationController.toolbarHidden;
+	
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdirect-ivar-access"
 	dispatch_once(&_toolbarToken, ^{
 #pragma clang diagnostic pop
 
-		BOOL shouldAnimate = animated;
+		BOOL shouldAnimate = YES;
 		if (self.presentingViewController) {
 			shouldAnimate = NO;
 		}
@@ -142,8 +146,8 @@
 		if (self.navigationController) {
 			UIToolbar *toolbar = self.toolbar;
 			if (toolbar.items.count > 0) {
-				[self setToolbarItems:toolbar.items animated:shouldAnimate];
-				[self.navigationController setToolbarHidden:!toolbar.items animated:shouldAnimate];
+				[self setToolbarItems:toolbar.items animated:YES];
+				[self.navigationController setToolbarHidden:!toolbar.items animated:YES];
 			}
 			self.webView.frame = self.view.bounds;
 			[toolbar removeFromSuperview];
