@@ -113,6 +113,21 @@
 
 	self.titleLabel.text = nil;
 
+	if ([[UINavigationBar class] respondsToSelector:@selector(appearance)]) {
+		NSDictionary *attributes = [[UINavigationBar appearance] titleTextAttributes];
+		UIFont *font = [attributes objectForKey:UITextAttributeFont];
+		if (font) self.titleLabel.font = font;
+		UIColor *textColor = [attributes objectForKey:UITextAttributeTextColor];
+		if (textColor) self.titleLabel.textColor = textColor;
+		UIColor *shadowColor = [attributes objectForKey:UITextAttributeTextShadowColor];
+		if (shadowColor) self.titleLabel.shadowColor = shadowColor;
+		NSValue *shadowOffsetValue = [attributes objectForKey:UITextAttributeTextShadowOffset];
+		if (shadowOffsetValue) {
+			UIOffset offset = [shadowOffsetValue UIOffsetValue];
+			self.titleLabel.shadowOffset = CGSizeMake(offset.horizontal, offset.vertical);
+		}
+	}
+	
 	[self.viewDidLoadTasks enumerateObjectsUsingBlock:^(void(^task)(DCTWebBrowser *), NSUInteger i, BOOL *stop) {
 		task(self);
 	}];
