@@ -9,7 +9,7 @@
 #import "_DCTWebBrowserActivityController.h"
 #import <objc/runtime.h>
 
-void* _DCTWebViewControllerActivityControllerContext = &_DCTWebViewControllerActivityControllerContext;
+static void* _DCTWebViewControllerActivityControllerContext = &_DCTWebViewControllerActivityControllerContext;
 
 @interface _DCTWebBrowserActivityController () <UIPopoverControllerDelegate>
 @property (nonatomic, strong) UIPopoverController *popoverController;
