@@ -153,11 +153,6 @@
 	dispatch_once(&_toolbarToken, ^{
 #pragma clang diagnostic pop
 
-		BOOL shouldAnimate = YES;
-		if (self.presentingViewController) {
-			shouldAnimate = NO;
-		}
-
 		if (self.navigationController) {
 			UIToolbar *toolbar = self.toolbar;
 			if (toolbar.items.count > 0) {
