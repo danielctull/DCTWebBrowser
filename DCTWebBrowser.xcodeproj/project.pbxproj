@@ -459,6 +459,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/DCTWebBrowser.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = DCTWebBrowser;
 				SKIP_INSTALL = YES;
@@ -470,6 +471,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/DCTWebBrowser.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = DCTWebBrowser;
 				SKIP_INSTALL = YES;
