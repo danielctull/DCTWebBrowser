@@ -303,7 +303,6 @@
 			NSString *versionString = (version == 6) ? @"" : [NSString stringWithFormat:@"-iOS%i", version];
 			NSString *resourceName = [NSString stringWithFormat:@"%@%@%@", name, scaleString, versionString];
 			NSString *path = [bundle pathForResource:resourceName ofType:@"png"];
-			NSLog(@"%@:%@ %@", self, NSStringFromSelector(_cmd), resourceName);
 			UIImage *image = [UIImage imageWithContentsOfFile:path];
 			if (image) return image;
 		}
