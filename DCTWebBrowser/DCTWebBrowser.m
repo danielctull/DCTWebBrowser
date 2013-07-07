@@ -13,10 +13,10 @@
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *backButton;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *forwardButton;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *reloadButton;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *actionButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *forwardButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *reloadButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *actionButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UINavigationItem *navItem;
@@ -49,8 +49,28 @@
 
 	self = [super initWithNibName:name bundle:bundle];
 	if (!self) return nil;
+
 	_viewDidLoadTasks = [NSMutableArray new];
 	_webViewDidLoadTasks = [NSMutableArray new];
+
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+		self.navigationItem.rightBarButtonItems = @[self.actionButton, self.forwardButton, self.backButton, self.reloadButton];
+	else
+		self.toolbarItems = @[
+			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+			self.reloadButton,
+			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+			self.backButton,
+			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+			self.forwardButton,
+			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+			self.actionButton,
+			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]
+		];
+	
 	return self;
 }
 
@@ -149,24 +169,54 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 
-	self.toolbarHiddenOnAppearing = self.navigationController.toolbarHidden;
-	
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdirect-ivar-access"
-	dispatch_once(&_toolbarToken, ^{
-#pragma clang diagnostic pop
+	self.webView.frame = self.view.bounds;
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) return;
 
-		if (self.navigationController) {
-			UIToolbar *toolbar = self.toolbar;
-			if (toolbar.items.count > 0) {
-				[self setToolbarItems:toolbar.items animated:YES];
-				[self.navigationController setToolbarHidden:!toolbar.items animated:YES];
-			}
-			self.webView.frame = self.view.bounds;
-			[toolbar removeFromSuperview];
-			[self.navigationBar removeFromSuperview];
-		}
-	});
+	[self.navigationController setToolbarHidden:NO animated:animated];
+}
+
+- (UIBarButtonItem *)reloadButton {
+
+	if (!_reloadButton)
+		_reloadButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reload:)];
+
+	return _reloadButton;
+}
+
+- (UIBarButtonItem *)backButton {
+
+	if (!_backButton) {
+		_backButton = [[UIBarButtonItem alloc] initWithImage:[[self class] imageNamed:@"UIButtonBarArrowLeft"]
+										 landscapeImagePhone:[[self class] imageNamed:@"UIButtonBarArrowLeftLandscape"]
+													   style:UIBarButtonItemStylePlain
+													  target:self
+													  action:@selector(goBack:)];
+		_backButton.landscapeImagePhoneInsets = UIEdgeInsetsMake(2.0f, 0.0f, -2.0f, 0.0f);
+	}
+
+	return _backButton;
+}
+
+- (UIBarButtonItem *)forwardButton {
+
+	if (!_forwardButton) {
+		_forwardButton = [[UIBarButtonItem alloc] initWithImage:[[self class] imageNamed:@"UIButtonBarArrowRight"]
+											landscapeImagePhone:[[self class] imageNamed:@"UIButtonBarArrowRightLandscape"]
+														  style:UIBarButtonItemStylePlain
+														 target:self
+														 action:@selector(goForward:)];
+		_forwardButton.landscapeImagePhoneInsets = UIEdgeInsetsMake(2.0f, 0.0f, -2.0f, 0.0f);
+	}
+
+	return _forwardButton;
+}
+
+- (UIBarButtonItem *)actionButton {
+
+	if (!_actionButton)
+		_actionButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(action:)];
+	
+	return _actionButton;
 }
 
 - (IBAction)reload:(id)sender {
