@@ -39,6 +39,10 @@
 		24487996169B2390004AC9A1 /* DCTWebBrowser_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24487995169B2390004AC9A1 /* DCTWebBrowser_iPad.xib */; };
 		249C35BE169B20DD005DF695 /* DCTWebBrowser.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24008B1B169775EA00C8AB03 /* DCTWebBrowser.h */; };
 		24B890E716987C1E00EF0D20 /* _DCTWebBrowserActivityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B890E616987C1E00EF0D20 /* _DCTWebBrowserActivityController.m */; };
+		24D2E5E717899E750043458E /* UIButtonBarArrowLeft@2x-iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D2E5E317899E750043458E /* UIButtonBarArrowLeft@2x-iOS7.png */; };
+		24D2E5E817899E750043458E /* UIButtonBarArrowLeftLandscape@2x-iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D2E5E417899E750043458E /* UIButtonBarArrowLeftLandscape@2x-iOS7.png */; };
+		24D2E5E917899E750043458E /* UIButtonBarArrowRight@2x-iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D2E5E517899E750043458E /* UIButtonBarArrowRight@2x-iOS7.png */; };
+		24D2E5EA17899E750043458E /* UIButtonBarArrowRightLandscape@2x-iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D2E5E617899E750043458E /* UIButtonBarArrowRightLandscape@2x-iOS7.png */; };
 		24E256C3169B2232001DC894 /* DCTWebBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24008B291697783E00C8AB03 /* DCTWebBrowser.bundle */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +108,10 @@
 		24487995169B2390004AC9A1 /* DCTWebBrowser_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCTWebBrowser_iPad.xib; sourceTree = "<group>"; };
 		24B890E516987C1E00EF0D20 /* _DCTWebBrowserActivityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DCTWebBrowserActivityController.h; sourceTree = "<group>"; };
 		24B890E616987C1E00EF0D20 /* _DCTWebBrowserActivityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DCTWebBrowserActivityController.m; sourceTree = "<group>"; };
+		24D2E5E317899E750043458E /* UIButtonBarArrowLeft@2x-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowLeft@2x-iOS7.png"; sourceTree = "<group>"; };
+		24D2E5E417899E750043458E /* UIButtonBarArrowLeftLandscape@2x-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowLeftLandscape@2x-iOS7.png"; sourceTree = "<group>"; };
+		24D2E5E517899E750043458E /* UIButtonBarArrowRight@2x-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowRight@2x-iOS7.png"; sourceTree = "<group>"; };
+		24D2E5E617899E750043458E /* UIButtonBarArrowRightLandscape@2x-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowRightLandscape@2x-iOS7.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +190,10 @@
 		24008B2C1697783E00C8AB03 /* DCTWebBrowserBundle */ = {
 			isa = PBXGroup;
 			children = (
+				24D2E5E317899E750043458E /* UIButtonBarArrowLeft@2x-iOS7.png */,
+				24D2E5E417899E750043458E /* UIButtonBarArrowLeftLandscape@2x-iOS7.png */,
+				24D2E5E517899E750043458E /* UIButtonBarArrowRight@2x-iOS7.png */,
+				24D2E5E617899E750043458E /* UIButtonBarArrowRightLandscape@2x-iOS7.png */,
 				24008BC31698385400C8AB03 /* EmbossedIcon@2x~ipad.png */,
 				24008BC41698385400C8AB03 /* EmbossedIcon@2x~iphone.png */,
 				24008BC51698385500C8AB03 /* EmbossedIcon~ipad.png */,
@@ -325,13 +337,17 @@
 				24008B5116977BF100C8AB03 /* UIButtonBarArrowRight.png in Resources */,
 				24008B5216977BF100C8AB03 /* UIButtonBarArrowRight@2x.png in Resources */,
 				24008B5316977BF100C8AB03 /* UIButtonBarArrowRightLandscape.png in Resources */,
+				24D2E5E717899E750043458E /* UIButtonBarArrowLeft@2x-iOS7.png in Resources */,
+				24D2E5E917899E750043458E /* UIButtonBarArrowRight@2x-iOS7.png in Resources */,
 				24008B5416977BF100C8AB03 /* UIButtonBarArrowRightLandscape@2x.png in Resources */,
 				24008BC81698385500C8AB03 /* EmbossedIcon@2x~ipad.png in Resources */,
 				24008BC91698385500C8AB03 /* EmbossedIcon@2x~iphone.png in Resources */,
 				24008BCA1698385500C8AB03 /* EmbossedIcon~ipad.png in Resources */,
+				24D2E5E817899E750043458E /* UIButtonBarArrowLeftLandscape@2x-iOS7.png in Resources */,
 				24008BCB1698385500C8AB03 /* EmbossedIcon~iphone.png in Resources */,
 				24008BCC1698385500C8AB03 /* StandardError.html in Resources */,
 				24487996169B2390004AC9A1 /* DCTWebBrowser_iPad.xib in Resources */,
+				24D2E5EA17899E750043458E /* UIButtonBarArrowRightLandscape@2x-iOS7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

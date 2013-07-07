@@ -105,10 +105,13 @@
 	[super viewDidLoad];
 
 	UIBarButtonItem *backButton = self.backButton;
+	backButton.image = [[self class] imageNamed:@"UIButtonBarArrowLeft"];
 	backButton.landscapeImagePhone = [[self class] imageNamed:@"UIButtonBarArrowLeftLandscape"];
 	backButton.landscapeImagePhoneInsets = UIEdgeInsetsMake(2.0f, 0.0f, -2.0f, 0.0f);
 
+
 	UIBarButtonItem *forwardButton = self.forwardButton;
+	forwardButton.image = [[self class] imageNamed:@"UIButtonBarArrowRight"];
 	forwardButton.landscapeImagePhone = [[self class] imageNamed:@"UIButtonBarArrowRightLandscape"];
 	forwardButton.landscapeImagePhoneInsets = UIEdgeInsetsMake(2.0f, 0.0f, -2.0f, 0.0f);
 
@@ -289,14 +292,21 @@
 #pragma mark - Bundle loading
 
 + (UIImage *)imageNamed:(NSString *)name {
-	NSInteger scale = (NSInteger)[[UIScreen mainScreen] scale];
+	NSInteger deviceScale = (NSInteger)[[UIScreen mainScreen] scale];
+	NSString *systemVersion = [[UIDevice currentDevice] systemVersion];
+	NSString *mainVersion = [[systemVersion componentsSeparatedByString:@"."] firstObject];
+	NSInteger deviceVersion = [mainVersion integerValue];
 	NSBundle *bundle = [self bundle];
-	while (scale > 0) {
-		NSString *resourceName = (scale == 1) ? name : [NSString stringWithFormat:@"%@@%ix", name, scale];
-		NSString *path = [bundle pathForResource:resourceName ofType:@"png"];
-		UIImage *image = [UIImage imageWithContentsOfFile:path];
-		if (image) return image;
-		scale--;
+	for (NSInteger scale = deviceScale; scale > 0; scale--) {
+		NSString *scaleString = (scale == 1) ? @"" : [NSString stringWithFormat:@"@%ix", scale];
+		for (NSInteger version = deviceVersion; version > 5; version--) {
+			NSString *versionString = (version == 6) ? @"" : [NSString stringWithFormat:@"-iOS%i", version];
+			NSString *resourceName = [NSString stringWithFormat:@"%@%@%@", name, scaleString, versionString];
+			NSString *path = [bundle pathForResource:resourceName ofType:@"png"];
+			NSLog(@"%@:%@ %@", self, NSStringFromSelector(_cmd), resourceName);
+			UIImage *image = [UIImage imageWithContentsOfFile:path];
+			if (image) return image;
+		}
 	}
 	return nil;
 }
