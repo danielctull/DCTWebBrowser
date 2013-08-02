@@ -92,9 +92,13 @@
 }
 
 - (UINavigationItem *)navigationItem {
+
 	if (self.navigationController.viewControllers.count > 1)
 		self.navItem.leftBarButtonItem = nil;
-	return self.navItem;
+
+	if (self.navItem) return self.navItem;
+
+	return [super navigationItem];
 }
 
 - (void)setDoneButtonHidden:(BOOL)doneButtonHidden {
