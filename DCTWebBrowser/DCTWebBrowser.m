@@ -141,6 +141,14 @@
 	forwardButton.landscapeImagePhone = [[self class] imageNamed:@"UIButtonBarArrowRightLandscape"];
 	forwardButton.landscapeImagePhoneInsets = UIEdgeInsetsMake(2.0f, 0.0f, -2.0f, 0.0f);
 
+	if ([[UIFont class] respondsToSelector:@selector(preferredFontForTextStyle:)]) {
+		UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+		self.titleLabel.font = font;
+		self.titleLabel.textColor = [UIColor blackColor];
+		self.titleLabel.shadowColor = nil;
+		self.titleLabel.shadowOffset = CGSizeZero;
+	}
+
 	self.titleLabel.text = nil;
 	
 	[self.viewDidLoadTasks enumerateObjectsUsingBlock:^(void(^task)(DCTWebBrowser *), NSUInteger i, BOOL *stop) {
