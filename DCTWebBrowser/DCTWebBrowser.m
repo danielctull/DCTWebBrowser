@@ -25,9 +25,7 @@
 @property (nonatomic, assign) BOOL toolbarHiddenOnAppearing;
 @end
 
-@implementation DCTWebBrowser {
-	dispatch_once_t _toolbarToken;
-}
+@implementation DCTWebBrowser
 
 - (void)dealloc {
 	UIWebView *webView = _webView;
