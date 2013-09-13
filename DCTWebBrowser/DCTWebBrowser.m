@@ -68,6 +68,8 @@
 			self.actionButton,
 			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]
 		];
+
+	[self updateButtons];
 	
 	return self;
 }
@@ -141,6 +143,7 @@
 
 	if ([[UIFont class] respondsToSelector:@selector(preferredFontForTextStyle:)]) {
 		UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+		font = [UIFont fontWithName:font.fontName size:12.0f];
 		self.titleLabel.font = font;
 		self.titleLabel.textColor = [UIColor blackColor];
 		self.titleLabel.shadowColor = nil;
