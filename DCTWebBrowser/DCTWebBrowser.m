@@ -84,11 +84,7 @@
 
 - (UINavigationItem *)navItem {
 	[self view];
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdirect-ivar-access"
 	return _navItem;
-#pragma clang diagnostic pop
 }
 
 - (UINavigationItem *)navigationItem {
@@ -103,10 +99,7 @@
 
 - (void)setDoneButtonHidden:(BOOL)doneButtonHidden {
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdirect-ivar-access"
 	_doneButtonHidden = doneButtonHidden;
-#pragma clang diagnostic pop
 
 	[self addViewDidLoadTask:^(DCTWebBrowser *webBrowser) {
 		webBrowser.navigationItem.leftBarButtonItem = doneButtonHidden ? nil : webBrowser.doneButton;
@@ -115,10 +108,7 @@
 
 - (void)setTitleHidden:(BOOL)titleHidden {
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdirect-ivar-access"
 	_titleHidden = titleHidden;
-#pragma clang diagnostic pop
 
 	[self addViewDidLoadTask:^(DCTWebBrowser *webBrowser) {
 		webBrowser.navigationItem.titleView = titleHidden ? nil : webBrowser.titleLabel;
