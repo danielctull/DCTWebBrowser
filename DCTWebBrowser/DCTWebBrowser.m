@@ -10,8 +10,6 @@
 #import "_DCTWebBrowserActivityController.h"
 
 @interface DCTWebBrowser () <UIWebViewDelegate>
-@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
-@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *forwardButton;
@@ -19,10 +17,8 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *actionButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
-@property (strong, nonatomic) IBOutlet UINavigationItem *navItem;
 @property (nonatomic, strong) NSMutableArray *viewDidLoadTasks;
 @property (nonatomic, strong) NSMutableArray *webViewDidLoadTasks;
-@property (nonatomic, assign) BOOL toolbarHiddenOnAppearing;
 @end
 
 @implementation DCTWebBrowser
@@ -50,6 +46,7 @@
 
 	_viewDidLoadTasks = [NSMutableArray new];
 	_webViewDidLoadTasks = [NSMutableArray new];
+	_doneButtonHidden = YES;
 
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 		self.navigationItem.rightBarButtonItems = @[self.actionButton, self.forwardButton, self.backButton, self.reloadButton];
@@ -74,29 +71,6 @@
 	return self;
 }
 
-- (UIView *)rotatingHeaderView {
-	return self.navigationBar;
-}
-
-- (UIView *)rotatingFooterView {
-	return self.toolbar;
-}
-
-- (UINavigationItem *)navItem {
-	[self view];
-	return _navItem;
-}
-
-- (UINavigationItem *)navigationItem {
-
-	if (self.navigationController.viewControllers.count > 1)
-		self.navItem.leftBarButtonItem = nil;
-
-	if (self.navItem) return self.navItem;
-
-	return [super navigationItem];
-}
-
 - (void)setDoneButtonHidden:(BOOL)doneButtonHidden {
 
 	_doneButtonHidden = doneButtonHidden;
@@ -117,20 +91,10 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	
+
+	self.titleLabel.text = nil;
 	self.navigationItem.titleView = self.titleLabel;
-
-	UIBarButtonItem *backButton = self.backButton;
-	backButton.image = [[self class] imageNamed:@"UIButtonBarArrowLeft"];
-	backButton.landscapeImagePhone = [[self class] imageNamed:@"UIButtonBarArrowLeftLandscape"];
-	backButton.landscapeImagePhoneInsets = UIEdgeInsetsMake(2.0f, 0.0f, -2.0f, 0.0f);
-
-
-	UIBarButtonItem *forwardButton = self.forwardButton;
-	forwardButton.image = [[self class] imageNamed:@"UIButtonBarArrowRight"];
-	forwardButton.landscapeImagePhone = [[self class] imageNamed:@"UIButtonBarArrowRightLandscape"];
-	forwardButton.landscapeImagePhoneInsets = UIEdgeInsetsMake(2.0f, 0.0f, -2.0f, 0.0f);
-
+	
 	if ([[UIFont class] respondsToSelector:@selector(preferredFontForTextStyle:)]) {
 		UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
 		font = [UIFont fontWithName:font.fontName size:12.0f];
@@ -139,8 +103,6 @@
 		self.titleLabel.shadowColor = nil;
 		self.titleLabel.shadowOffset = CGSizeZero;
 	}
-
-	self.titleLabel.text = nil;
 	
 	[self.viewDidLoadTasks enumerateObjectsUsingBlock:^(void(^task)(DCTWebBrowser *), NSUInteger i, BOOL *stop) {
 		task(self);
@@ -150,7 +112,6 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
-	[self.navigationController setToolbarHidden:self.toolbarHiddenOnAppearing animated:YES];
 	UIWebView *webView = self.webView;
 	webView.delegate = nil;
 	[webView stopLoading];
@@ -159,10 +120,8 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 
-	self.webView.frame = self.view.bounds;
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) return;
-
-	[self.navigationController setToolbarHidden:NO animated:animated];
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+		[self.navigationController setToolbarHidden:NO animated:animated];
 }
 
 - (UIBarButtonItem *)reloadButton {

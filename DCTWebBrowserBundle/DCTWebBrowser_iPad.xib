@@ -1,89 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4457.9" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3682.9"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DCTWebBrowser">
             <connections>
-                <outlet property="doneButton" destination="52" id="84"/>
-                <outlet property="navItem" destination="75" id="81"/>
-                <outlet property="navigationBar" destination="74" id="82"/>
                 <outlet property="titleLabel" destination="77" id="83"/>
-                <outlet property="view" destination="1" id="3"/>
+                <outlet property="view" destination="30" id="JPQ-i9-tDa"/>
                 <outlet property="webView" destination="30" id="31"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="1">
-            <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="77">
+            <rect key="frame" x="0.0" y="0.0" width="236" height="40"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <webView contentMode="scaleToFill" scalesPageToFit="YES" id="30">
-                    <rect key="frame" x="0.0" y="44" width="540" height="576"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="63"/>
-                    </connections>
-                </webView>
-                <navigationBar contentMode="scaleToFill" id="74">
-                    <rect key="frame" x="0.0" y="0.0" width="540" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <items>
-                        <navigationItem id="75">
-                            <nil key="title"/>
-                            <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="52">
-                                <connections>
-                                    <action selector="done:" destination="-1" id="58"/>
-                                </connections>
-                            </barButtonItem>
-                            <view key="titleView" opaque="NO" contentMode="scaleToFill" id="76">
-                                <rect key="frame" x="152" y="2" width="236" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="77">
-                                        <rect key="frame" x="0.0" y="0.0" width="236" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" cocoaTouchSystemColor="lightTextColor"/>
-                                        <size key="shadowOffset" width="0.0" height="1"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
-            </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-        </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <nil key="highlightedColor"/>
+            <color key="shadowColor" cocoaTouchSystemColor="lightTextColor"/>
+            <size key="shadowOffset" width="0.0" height="1"/>
+        </label>
+        <webView contentMode="scaleToFill" scalesPageToFit="YES" id="30">
+            <rect key="frame" x="0.0" y="0.0" width="540" height="576"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="delegate" destination="-1" id="63"/>
+            </connections>
+        </webView>
     </objects>
-    <classes>
-        <class className="DCTWebBrowser" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DCTWebBrowser.h"/>
-            <relationships>
-                <relationship kind="action" name="action:"/>
-                <relationship kind="action" name="done:"/>
-                <relationship kind="action" name="goBack:"/>
-                <relationship kind="action" name="goForward:"/>
-                <relationship kind="action" name="reload:"/>
-                <relationship kind="outlet" name="actionButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="backButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="doneButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="forwardButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="navItem" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
-                <relationship kind="outlet" name="reloadButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
 </document>
