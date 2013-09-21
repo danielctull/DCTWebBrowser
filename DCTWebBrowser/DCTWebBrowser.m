@@ -297,9 +297,9 @@
 	NSInteger deviceVersion = [mainVersion integerValue];
 	NSBundle *bundle = [self bundle];
 	for (NSInteger scale = deviceScale; scale > 0; scale--) {
-		NSString *scaleString = (scale == 1) ? @"" : [NSString stringWithFormat:@"@%ix", scale];
+		NSString *scaleString = (scale == 1) ? @"" : [NSString stringWithFormat:@"@%@x", @(scale)];
 		for (NSInteger version = deviceVersion; version > 5; version--) {
-			NSString *versionString = (version == 6) ? @"" : [NSString stringWithFormat:@"-iOS%i", version];
+			NSString *versionString = (version == 6) ? @"" : [NSString stringWithFormat:@"-iOS%@", @(version)];
 			NSString *resourceName = [NSString stringWithFormat:@"%@%@%@", name, scaleString, versionString];
 			NSString *path = [bundle pathForResource:resourceName ofType:@"png"];
 			UIImage *image = [UIImage imageWithContentsOfFile:path];
