@@ -16,7 +16,6 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *reloadButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *actionButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
-@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (nonatomic, strong) NSMutableArray *viewDidLoadTasks;
 @property (nonatomic, strong) NSMutableArray *webViewDidLoadTasks;
 @end
@@ -81,28 +80,19 @@
 }
 
 - (void)setTitleHidden:(BOOL)titleHidden {
-
 	_titleHidden = titleHidden;
+	self.navigationItem.title = titleHidden ? nil : self.title;
+}
 
-	[self addViewDidLoadTask:^(DCTWebBrowser *webBrowser) {
-		webBrowser.navigationItem.titleView = titleHidden ? nil : webBrowser.titleLabel;
-	}];
+- (void)setTitle:(NSString *)title {
+	[super setTitle:title];
+	self.navigationItem.title = self.titleHidden ? nil : title;
 }
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	self.titleLabel.text = nil;
-	self.navigationItem.titleView = self.titleLabel;
-	
-	if ([[UIFont class] respondsToSelector:@selector(preferredFontForTextStyle:)]) {
-		UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
-		font = [UIFont fontWithName:font.fontName size:12.0f];
-		self.titleLabel.font = font;
-		self.titleLabel.textColor = [UIColor blackColor];
-		self.titleLabel.shadowColor = nil;
-		self.titleLabel.shadowOffset = CGSizeZero;
-	}
+	self.title = nil;
 	
 	[self.viewDidLoadTasks enumerateObjectsUsingBlock:^(void(^task)(DCTWebBrowser *), NSUInteger i, BOOL *stop) {
 		task(self);
@@ -234,7 +224,7 @@
 
 - (void)loadRequest:(NSURLRequest *)request {
 	[self addViewDidLoadTask:^(DCTWebBrowser *webBrowser) {
-		webBrowser.titleLabel.text = request.URL.absoluteString;
+		webBrowser.title = request.URL.absoluteString;
 		[webBrowser.webView loadRequest:request];
 	}];
 }
@@ -279,7 +269,7 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-	self.titleLabel.text = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+	self.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 	[self updateButtons];
 
 	[self.webViewDidLoadTasks enumerateObjectsUsingBlock:^(void(^task)(DCTWebBrowser *), NSUInteger i, BOOL *stop) {
