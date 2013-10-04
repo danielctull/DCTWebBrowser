@@ -110,6 +110,7 @@
 		240B500A169C539C003A55D7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		240B500B169C539C003A55D7 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		24487995169B2390004AC9A1 /* DCTWebBrowser_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCTWebBrowser_iPad.xib; sourceTree = "<group>"; };
+		244F133217FEB31D0016E94E /* Architectures.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Architectures.xcconfig; sourceTree = "<group>"; };
 		2491B3691789ADD400D3913B /* UIButtonBarArrowLeft-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowLeft-iOS7.png"; sourceTree = "<group>"; };
 		2491B36A1789ADD400D3913B /* UIButtonBarArrowLeftLandscape-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowLeftLandscape-iOS7.png"; sourceTree = "<group>"; };
 		2491B36B1789ADD400D3913B /* UIButtonBarArrowRight-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowRight-iOS7.png"; sourceTree = "<group>"; };
@@ -156,6 +157,7 @@
 		24008B08169775EA00C8AB03 = {
 			isa = PBXGroup;
 			children = (
+				244F133217FEB31D0016E94E /* Architectures.xcconfig */,
 				24008B18169775EA00C8AB03 /* DCTWebBrowser */,
 				24008B2C1697783E00C8AB03 /* DCTWebBrowserBundle */,
 				24008B5F16977F0700C8AB03 /* DCTWebBrowserDemo */,
@@ -488,8 +490,8 @@
 		};
 		24008B22169775EA00C8AB03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244F133217FEB31D0016E94E /* Architectures.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				DSTROOT = /tmp/DCTWebBrowser.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -500,8 +502,8 @@
 		};
 		24008B23169775EA00C8AB03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244F133217FEB31D0016E94E /* Architectures.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				DSTROOT = /tmp/DCTWebBrowser.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -512,6 +514,7 @@
 		};
 		24008B341697783E00C8AB03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244F133217FEB31D0016E94E /* Architectures.xcconfig */;
 			buildSettings = {
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -525,6 +528,7 @@
 		};
 		24008B351697783E00C8AB03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244F133217FEB31D0016E94E /* Architectures.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
