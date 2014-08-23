@@ -7,7 +7,7 @@
 //
 
 #import "_DCTWebBrowserActivityController.h"
-#import <objc/runtime.h>
+@import ObjectiveC.runtime;
 
 static void* _DCTWebViewControllerActivityControllerContext = &_DCTWebViewControllerActivityControllerContext;
 

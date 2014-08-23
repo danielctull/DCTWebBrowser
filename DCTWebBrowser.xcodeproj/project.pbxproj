@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24008B17169775EA00C8AB03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24008B16169775EA00C8AB03 /* Foundation.framework */; };
 		24008B1E169775EA00C8AB03 /* DCTWebBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 24008B1D169775EA00C8AB03 /* DCTWebBrowser.m */; };
 		24008B3A169778E600C8AB03 /* DCTWebBrowser_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24008B39169778E600C8AB03 /* DCTWebBrowser_iPhone.xib */; };
-		24008B3C1697791200C8AB03 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24008B3B1697791200C8AB03 /* UIKit.framework */; };
 		24008B4D16977BF100C8AB03 /* UIButtonBarArrowLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B4516977BF100C8AB03 /* UIButtonBarArrowLeft.png */; };
 		24008B4E16977BF100C8AB03 /* UIButtonBarArrowLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B4616977BF100C8AB03 /* UIButtonBarArrowLeft@2x.png */; };
 		24008B4F16977BF100C8AB03 /* UIButtonBarArrowLeftLandscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B4716977BF100C8AB03 /* UIButtonBarArrowLeftLandscape.png */; };
@@ -19,15 +17,8 @@
 		24008B5216977BF100C8AB03 /* UIButtonBarArrowRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B4A16977BF100C8AB03 /* UIButtonBarArrowRight@2x.png */; };
 		24008B5316977BF100C8AB03 /* UIButtonBarArrowRightLandscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B4B16977BF100C8AB03 /* UIButtonBarArrowRightLandscape.png */; };
 		24008B5416977BF100C8AB03 /* UIButtonBarArrowRightLandscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B4C16977BF100C8AB03 /* UIButtonBarArrowRightLandscape@2x.png */; };
-		24008B5B16977F0700C8AB03 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24008B3B1697791200C8AB03 /* UIKit.framework */; };
-		24008B5C16977F0700C8AB03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24008B16169775EA00C8AB03 /* Foundation.framework */; };
-		24008B5E16977F0700C8AB03 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24008B5D16977F0700C8AB03 /* CoreGraphics.framework */; };
-		24008B6416977F0700C8AB03 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24008B6216977F0700C8AB03 /* InfoPlist.strings */; };
 		24008B6616977F0700C8AB03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24008B6516977F0700C8AB03 /* main.m */; };
 		24008B6A16977F0700C8AB03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24008B6916977F0700C8AB03 /* AppDelegate.m */; };
-		24008B6C16977F0700C8AB03 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B6B16977F0700C8AB03 /* Default.png */; };
-		24008B6E16977F0700C8AB03 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B6D16977F0700C8AB03 /* Default@2x.png */; };
-		24008B7016977F0700C8AB03 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008B6F16977F0700C8AB03 /* Default-568h@2x.png */; };
 		24008B7416977F1500C8AB03 /* libDCTWebBrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24008B13169775EA00C8AB03 /* libDCTWebBrowser.a */; };
 		24008BC81698385500C8AB03 /* EmbossedIcon@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008BC31698385400C8AB03 /* EmbossedIcon@2x~ipad.png */; };
 		24008BC91698385500C8AB03 /* EmbossedIcon@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 24008BC41698385400C8AB03 /* EmbossedIcon@2x~iphone.png */; };
@@ -37,6 +28,7 @@
 		240B500C169C539C003A55D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B500A169C539C003A55D7 /* ViewController.m */; };
 		240B500D169C539C003A55D7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240B500B169C539C003A55D7 /* ViewController.xib */; };
 		24487996169B2390004AC9A1 /* DCTWebBrowser_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24487995169B2390004AC9A1 /* DCTWebBrowser_iPad.xib */; };
+		246E12F919A9421B00780D49 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 246E12F819A9421B00780D49 /* Images.xcassets */; };
 		2491B36D1789ADD400D3913B /* UIButtonBarArrowLeft-iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 2491B3691789ADD400D3913B /* UIButtonBarArrowLeft-iOS7.png */; };
 		2491B36E1789ADD400D3913B /* UIButtonBarArrowLeftLandscape-iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 2491B36A1789ADD400D3913B /* UIButtonBarArrowLeftLandscape-iOS7.png */; };
 		2491B36F1789ADD400D3913B /* UIButtonBarArrowRight-iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 2491B36B1789ADD400D3913B /* UIButtonBarArrowRight-iOS7.png */; };
@@ -75,13 +67,11 @@
 
 /* Begin PBXFileReference section */
 		24008B13169775EA00C8AB03 /* libDCTWebBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDCTWebBrowser.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		24008B16169775EA00C8AB03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24008B1B169775EA00C8AB03 /* DCTWebBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCTWebBrowser.h; sourceTree = "<group>"; };
 		24008B1D169775EA00C8AB03 /* DCTWebBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTWebBrowser.m; sourceTree = "<group>"; };
 		24008B291697783E00C8AB03 /* DCTWebBrowser.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCTWebBrowser.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		24008B2E1697783E00C8AB03 /* DCTWebBrowserBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DCTWebBrowserBundle-Info.plist"; sourceTree = "<group>"; };
+		24008B2E1697783E00C8AB03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24008B39169778E600C8AB03 /* DCTWebBrowser_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCTWebBrowser_iPhone.xib; sourceTree = "<group>"; };
-		24008B3B1697791200C8AB03 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24008B4516977BF100C8AB03 /* UIButtonBarArrowLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarArrowLeft.png; sourceTree = "<group>"; };
 		24008B4616977BF100C8AB03 /* UIButtonBarArrowLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowLeft@2x.png"; sourceTree = "<group>"; };
 		24008B4716977BF100C8AB03 /* UIButtonBarArrowLeftLandscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarArrowLeftLandscape.png; sourceTree = "<group>"; };
@@ -90,17 +80,11 @@
 		24008B4A16977BF100C8AB03 /* UIButtonBarArrowRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowRight@2x.png"; sourceTree = "<group>"; };
 		24008B4B16977BF100C8AB03 /* UIButtonBarArrowRightLandscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarArrowRightLandscape.png; sourceTree = "<group>"; };
 		24008B4C16977BF100C8AB03 /* UIButtonBarArrowRightLandscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowRightLandscape@2x.png"; sourceTree = "<group>"; };
-		24008B5916977F0700C8AB03 /* DCTWebBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCTWebBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		24008B5D16977F0700C8AB03 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		24008B6116977F0700C8AB03 /* DCTWebBrowserDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DCTWebBrowserDemo-Info.plist"; sourceTree = "<group>"; };
-		24008B6316977F0700C8AB03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		24008B5916977F0700C8AB03 /* DCTWebBrowser Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DCTWebBrowser Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24008B6116977F0700C8AB03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24008B6516977F0700C8AB03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		24008B6716977F0700C8AB03 /* DCTWebBrowserDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DCTWebBrowserDemo-Prefix.pch"; sourceTree = "<group>"; };
 		24008B6816977F0700C8AB03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		24008B6916977F0700C8AB03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		24008B6B16977F0700C8AB03 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		24008B6D16977F0700C8AB03 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		24008B6F16977F0700C8AB03 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		24008BC31698385400C8AB03 /* EmbossedIcon@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmbossedIcon@2x~ipad.png"; sourceTree = "<group>"; };
 		24008BC41698385400C8AB03 /* EmbossedIcon@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmbossedIcon@2x~iphone.png"; sourceTree = "<group>"; };
 		24008BC51698385500C8AB03 /* EmbossedIcon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmbossedIcon~ipad.png"; sourceTree = "<group>"; };
@@ -110,7 +94,16 @@
 		240B500A169C539C003A55D7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		240B500B169C539C003A55D7 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		24487995169B2390004AC9A1 /* DCTWebBrowser_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCTWebBrowser_iPad.xib; sourceTree = "<group>"; };
-		244F133217FEB31D0016E94E /* Architectures.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Architectures.xcconfig; sourceTree = "<group>"; };
+		246E12EF19A940A500780D49 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		246E12F019A940A500780D49 /* iOS Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS Application.xcconfig"; sourceTree = "<group>"; };
+		246E12F119A940A500780D49 /* iOS Bundle.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS Bundle.xcconfig"; sourceTree = "<group>"; };
+		246E12F219A940A500780D49 /* iOS Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS Framework.xcconfig"; sourceTree = "<group>"; };
+		246E12F319A940A500780D49 /* iOS Static Library.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS Static Library.xcconfig"; sourceTree = "<group>"; };
+		246E12F419A940A500780D49 /* iOS Tests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS Tests.xcconfig"; sourceTree = "<group>"; };
+		246E12F519A940A500780D49 /* OS X Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "OS X Framework.xcconfig"; sourceTree = "<group>"; };
+		246E12F619A940A500780D49 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		246E12F719A940A500780D49 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
+		246E12F819A9421B00780D49 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2491B3691789ADD400D3913B /* UIButtonBarArrowLeft-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowLeft-iOS7.png"; sourceTree = "<group>"; };
 		2491B36A1789ADD400D3913B /* UIButtonBarArrowLeftLandscape-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowLeftLandscape-iOS7.png"; sourceTree = "<group>"; };
 		2491B36B1789ADD400D3913B /* UIButtonBarArrowRight-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowRight-iOS7.png"; sourceTree = "<group>"; };
@@ -128,8 +121,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24008B3C1697791200C8AB03 /* UIKit.framework in Frameworks */,
-				24008B17169775EA00C8AB03 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,9 +136,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				24008B7416977F1500C8AB03 /* libDCTWebBrowser.a in Frameworks */,
-				24008B5B16977F0700C8AB03 /* UIKit.framework in Frameworks */,
-				24008B5C16977F0700C8AB03 /* Foundation.framework in Frameworks */,
-				24008B5E16977F0700C8AB03 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,11 +145,10 @@
 		24008B08169775EA00C8AB03 = {
 			isa = PBXGroup;
 			children = (
-				244F133217FEB31D0016E94E /* Architectures.xcconfig */,
 				24008B18169775EA00C8AB03 /* DCTWebBrowser */,
-				24008B2C1697783E00C8AB03 /* DCTWebBrowserBundle */,
-				24008B5F16977F0700C8AB03 /* DCTWebBrowserDemo */,
-				24008B15169775EA00C8AB03 /* Frameworks */,
+				24008B2C1697783E00C8AB03 /* DCTWebBrowser Bundle */,
+				24008B5F16977F0700C8AB03 /* DCTWebBrowser Demo */,
+				246E12EE19A940A500780D49 /* Configurations */,
 				24008B14169775EA00C8AB03 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -171,19 +158,9 @@
 			children = (
 				24008B13169775EA00C8AB03 /* libDCTWebBrowser.a */,
 				24008B291697783E00C8AB03 /* DCTWebBrowser.bundle */,
-				24008B5916977F0700C8AB03 /* DCTWebBrowser.app */,
+				24008B5916977F0700C8AB03 /* DCTWebBrowser Demo.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		24008B15169775EA00C8AB03 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				24008B3B1697791200C8AB03 /* UIKit.framework */,
-				24008B16169775EA00C8AB03 /* Foundation.framework */,
-				24008B5D16977F0700C8AB03 /* CoreGraphics.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		24008B18169775EA00C8AB03 /* DCTWebBrowser */ = {
@@ -197,7 +174,7 @@
 			path = DCTWebBrowser;
 			sourceTree = "<group>";
 		};
-		24008B2C1697783E00C8AB03 /* DCTWebBrowserBundle */ = {
+		24008B2C1697783E00C8AB03 /* DCTWebBrowser Bundle */ = {
 			isa = PBXGroup;
 			children = (
 				2491B3691789ADD400D3913B /* UIButtonBarArrowLeft-iOS7.png */,
@@ -223,12 +200,12 @@
 				24008B4C16977BF100C8AB03 /* UIButtonBarArrowRightLandscape@2x.png */,
 				24008B39169778E600C8AB03 /* DCTWebBrowser_iPhone.xib */,
 				24487995169B2390004AC9A1 /* DCTWebBrowser_iPad.xib */,
-				24008B2E1697783E00C8AB03 /* DCTWebBrowserBundle-Info.plist */,
+				24008B2E1697783E00C8AB03 /* Info.plist */,
 			);
-			path = DCTWebBrowserBundle;
+			path = "DCTWebBrowser Bundle";
 			sourceTree = "<group>";
 		};
-		24008B5F16977F0700C8AB03 /* DCTWebBrowserDemo */ = {
+		24008B5F16977F0700C8AB03 /* DCTWebBrowser Demo */ = {
 			isa = PBXGroup;
 			children = (
 				24008B6816977F0700C8AB03 /* AppDelegate.h */,
@@ -236,23 +213,27 @@
 				240B5009169C539C003A55D7 /* ViewController.h */,
 				240B500A169C539C003A55D7 /* ViewController.m */,
 				240B500B169C539C003A55D7 /* ViewController.xib */,
-				24008B6016977F0700C8AB03 /* Supporting Files */,
+				24008B6116977F0700C8AB03 /* Info.plist */,
+				246E12F819A9421B00780D49 /* Images.xcassets */,
+				24008B6516977F0700C8AB03 /* main.m */,
 			);
-			path = DCTWebBrowserDemo;
+			path = "DCTWebBrowser Demo";
 			sourceTree = "<group>";
 		};
-		24008B6016977F0700C8AB03 /* Supporting Files */ = {
+		246E12EE19A940A500780D49 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
-				24008B6116977F0700C8AB03 /* DCTWebBrowserDemo-Info.plist */,
-				24008B6216977F0700C8AB03 /* InfoPlist.strings */,
-				24008B6516977F0700C8AB03 /* main.m */,
-				24008B6716977F0700C8AB03 /* DCTWebBrowserDemo-Prefix.pch */,
-				24008B6B16977F0700C8AB03 /* Default.png */,
-				24008B6D16977F0700C8AB03 /* Default@2x.png */,
-				24008B6F16977F0700C8AB03 /* Default-568h@2x.png */,
+				246E12EF19A940A500780D49 /* Debug.xcconfig */,
+				246E12F019A940A500780D49 /* iOS Application.xcconfig */,
+				246E12F119A940A500780D49 /* iOS Bundle.xcconfig */,
+				246E12F219A940A500780D49 /* iOS Framework.xcconfig */,
+				246E12F319A940A500780D49 /* iOS Static Library.xcconfig */,
+				246E12F419A940A500780D49 /* iOS Tests.xcconfig */,
+				246E12F519A940A500780D49 /* OS X Framework.xcconfig */,
+				246E12F619A940A500780D49 /* Release.xcconfig */,
+				246E12F719A940A500780D49 /* Shared.xcconfig */,
 			);
-			name = "Supporting Files";
+			path = Configurations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +257,9 @@
 			productReference = 24008B13169775EA00C8AB03 /* libDCTWebBrowser.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		24008B281697783E00C8AB03 /* DCTWebBrowserBundle */ = {
+		24008B281697783E00C8AB03 /* DCTWebBrowser Bundle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24008B331697783E00C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebBrowserBundle" */;
+			buildConfigurationList = 24008B331697783E00C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebBrowser Bundle" */;
 			buildPhases = (
 				24008B251697783E00C8AB03 /* Sources */,
 				24008B261697783E00C8AB03 /* Frameworks */,
@@ -288,14 +269,14 @@
 			);
 			dependencies = (
 			);
-			name = DCTWebBrowserBundle;
+			name = "DCTWebBrowser Bundle";
 			productName = DCTWebViewControllerBundle;
 			productReference = 24008B291697783E00C8AB03 /* DCTWebBrowser.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		24008B5816977F0700C8AB03 /* DCTWebBrowserDemo */ = {
+		24008B5816977F0700C8AB03 /* DCTWebBrowser Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24008B7116977F0700C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebBrowserDemo" */;
+			buildConfigurationList = 24008B7116977F0700C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebBrowser Demo" */;
 			buildPhases = (
 				24008B5516977F0700C8AB03 /* Sources */,
 				24008B5616977F0700C8AB03 /* Frameworks */,
@@ -305,9 +286,9 @@
 			);
 			dependencies = (
 			);
-			name = DCTWebBrowserDemo;
+			name = "DCTWebBrowser Demo";
 			productName = DCTWebViewControllerDemo;
-			productReference = 24008B5916977F0700C8AB03 /* DCTWebBrowser.app */;
+			productReference = 24008B5916977F0700C8AB03 /* DCTWebBrowser Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -332,8 +313,8 @@
 			projectRoot = "";
 			targets = (
 				24008B12169775EA00C8AB03 /* DCTWebBrowser */,
-				24008B281697783E00C8AB03 /* DCTWebBrowserBundle */,
-				24008B5816977F0700C8AB03 /* DCTWebBrowserDemo */,
+				24008B281697783E00C8AB03 /* DCTWebBrowser Bundle */,
+				24008B5816977F0700C8AB03 /* DCTWebBrowser Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -373,10 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24008B6416977F0700C8AB03 /* InfoPlist.strings in Resources */,
-				24008B6C16977F0700C8AB03 /* Default.png in Resources */,
-				24008B6E16977F0700C8AB03 /* Default@2x.png in Resources */,
-				24008B7016977F0700C8AB03 /* Default-568h@2x.png in Resources */,
+				246E12F919A9421B00780D49 /* Images.xcassets in Resources */,
 				24E256C3169B2232001DC894 /* DCTWebBrowser.bundle in Resources */,
 				240B500D169C539C003A55D7 /* ViewController.xib in Resources */,
 			);
@@ -416,155 +394,67 @@
 /* Begin PBXTargetDependency section */
 		24008B37169778A100C8AB03 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 24008B281697783E00C8AB03 /* DCTWebBrowserBundle */;
+			target = 24008B281697783E00C8AB03 /* DCTWebBrowser Bundle */;
 			targetProxy = 24008B36169778A100C8AB03 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		24008B6216977F0700C8AB03 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				24008B6316977F0700C8AB03 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		24008B1F169775EA00C8AB03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 246E12EF19A940A500780D49 /* Debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				WARNING_CFLAGS = (
-					"-Weverything",
-					"-Wno-objc-missing-property-synthesis",
-				);
 			};
 			name = Debug;
 		};
 		24008B20169775EA00C8AB03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 246E12F619A940A500780D49 /* Release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-				WARNING_CFLAGS = (
-					"-Weverything",
-					"-Wno-objc-missing-property-synthesis",
-				);
 			};
 			name = Release;
 		};
 		24008B22169775EA00C8AB03 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 244F133217FEB31D0016E94E /* Architectures.xcconfig */;
+			baseConfigurationReference = 246E12F319A940A500780D49 /* iOS Static Library.xcconfig */;
 			buildSettings = {
-				DSTROOT = /tmp/DCTWebBrowser.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = DCTWebBrowser;
-				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
 		24008B23169775EA00C8AB03 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 244F133217FEB31D0016E94E /* Architectures.xcconfig */;
+			baseConfigurationReference = 246E12F319A940A500780D49 /* iOS Static Library.xcconfig */;
 			buildSettings = {
-				DSTROOT = /tmp/DCTWebBrowser.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = DCTWebBrowser;
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
 		24008B341697783E00C8AB03 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 244F133217FEB31D0016E94E /* Architectures.xcconfig */;
+			baseConfigurationReference = 246E12F119A940A500780D49 /* iOS Bundle.xcconfig */;
 			buildSettings = {
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				INFOPLIST_FILE = "DCTWebBrowserBundle/DCTWebBrowserBundle-Info.plist";
 				PRODUCT_NAME = DCTWebBrowser;
-				SDKROOT = iphoneos;
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
 		24008B351697783E00C8AB03 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 244F133217FEB31D0016E94E /* Architectures.xcconfig */;
+			baseConfigurationReference = 246E12F119A940A500780D49 /* iOS Bundle.xcconfig */;
 			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				INFOPLIST_FILE = "DCTWebBrowserBundle/DCTWebBrowserBundle-Info.plist";
 				PRODUCT_NAME = DCTWebBrowser;
-				SDKROOT = iphoneos;
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
 		24008B7216977F0700C8AB03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 246E12F019A940A500780D49 /* iOS Application.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DCTWebBrowserDemo/DCTWebBrowserDemo-Prefix.pch";
-				INFOPLIST_FILE = "DCTWebBrowserDemo/DCTWebBrowserDemo-Info.plist";
-				PRODUCT_NAME = DCTWebBrowser;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		24008B7316977F0700C8AB03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 246E12F019A940A500780D49 /* iOS Application.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DCTWebBrowserDemo/DCTWebBrowserDemo-Prefix.pch";
-				INFOPLIST_FILE = "DCTWebBrowserDemo/DCTWebBrowserDemo-Info.plist";
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PRODUCT_NAME = DCTWebBrowser;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -589,7 +479,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24008B331697783E00C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebBrowserBundle" */ = {
+		24008B331697783E00C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebBrowser Bundle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24008B341697783E00C8AB03 /* Debug */,
@@ -598,7 +488,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24008B7116977F0700C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebBrowserDemo" */ = {
+		24008B7116977F0700C8AB03 /* Build configuration list for PBXNativeTarget "DCTWebBrowser Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24008B7216977F0700C8AB03 /* Debug */,

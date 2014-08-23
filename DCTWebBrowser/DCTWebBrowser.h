@@ -1,12 +1,16 @@
 //
-//  DCTWebViewController.h
-//  DCTWebViewController
+//  DCTWebBrowser.h
+//  DCTWebBrowser
 //
 //  Created by Daniel Tull on 04/01/2013.
 //  Copyright (c) 2013 Daniel Tull. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
+//! Project version number and string for DCTWebBrowser.
+FOUNDATION_EXPORT double DCTWebBrowserVersionNumber;
+FOUNDATION_EXPORT const unsigned char DCTWebBrowserVersionString[];
 
 @interface DCTWebBrowser : UIViewController
 
