@@ -300,6 +300,9 @@
 }
 
 + (NSBundle *)bundle {
+#ifdef FRAMEWORK
+	return [NSBundle bundleForClass:self];
+#else
 	static NSBundle *bundle = nil;
 	static dispatch_once_t bundleToken;
 	dispatch_once(&bundleToken, ^{
@@ -314,6 +317,7 @@
 				bundle = [NSBundle bundleWithURL:URL];
 	});
 	return bundle;
+#endif
 }
 
 @end
