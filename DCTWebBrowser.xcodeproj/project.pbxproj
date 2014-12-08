@@ -165,10 +165,6 @@
 		246E12F719A940A500780D49 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		246E12F819A9421B00780D49 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		246E12FF19A9427400780D49 /* DCTWebBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DCTWebBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		246E130219A9427500780D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		246E130319A9427500780D49 /* DCTWebBrowser iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DCTWebBrowser iOS.h"; sourceTree = "<group>"; };
-		246E130E19A9427500780D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		246E130F19A9427500780D49 /* DCTWebBrowser_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTWebBrowser_iOSTests.m; sourceTree = "<group>"; };
 		246E131E19A9428D00780D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2491B3691789ADD400D3913B /* UIButtonBarArrowLeft-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowLeft-iOS7.png"; sourceTree = "<group>"; };
 		2491B36A1789ADD400D3913B /* UIButtonBarArrowLeftLandscape-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowLeftLandscape-iOS7.png"; sourceTree = "<group>"; };
@@ -222,8 +218,6 @@
 				24008B2C1697783E00C8AB03 /* DCTWebBrowser Bundle */,
 				24008B5F16977F0700C8AB03 /* DCTWebBrowser Demo */,
 				246E12EE19A940A500780D49 /* Configurations */,
-				246E130019A9427500780D49 /* DCTWebBrowser iOS */,
-				246E130C19A9427500780D49 /* DCTWebBrowser iOSTests */,
 				24008B14169775EA00C8AB03 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -311,40 +305,6 @@
 				246E12F719A940A500780D49 /* Shared.xcconfig */,
 			);
 			path = Configurations;
-			sourceTree = "<group>";
-		};
-		246E130019A9427500780D49 /* DCTWebBrowser iOS */ = {
-			isa = PBXGroup;
-			children = (
-				246E130319A9427500780D49 /* DCTWebBrowser iOS.h */,
-				246E130119A9427500780D49 /* Supporting Files */,
-			);
-			path = "DCTWebBrowser iOS";
-			sourceTree = "<group>";
-		};
-		246E130119A9427500780D49 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				246E130219A9427500780D49 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		246E130C19A9427500780D49 /* DCTWebBrowser iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				246E130F19A9427500780D49 /* DCTWebBrowser_iOSTests.m */,
-				246E130D19A9427500780D49 /* Supporting Files */,
-			);
-			path = "DCTWebBrowser iOSTests";
-			sourceTree = "<group>";
-		};
-		246E130D19A9427500780D49 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				246E130E19A9427500780D49 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
